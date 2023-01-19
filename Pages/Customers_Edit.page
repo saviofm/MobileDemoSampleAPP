@@ -1,0 +1,199 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "{FirstName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCFirstName",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Nome",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "{LastName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCLastName",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Sobrenome",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "{PhoneNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCPhone",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Tel.",
+							"PlaceHolder": "PlaceHolder",
+							"KeyboardType": "Phone",
+							"Enabled": true
+						},
+						{
+							"Value": "{EmailAddress}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCEmail",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Email",
+							"PlaceHolder": "PlaceHolder",
+							"KeyboardType": "Email",
+							"Enabled": true
+						},
+						{
+							"Value": "{Street}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCStreet",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Endereço",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "{HouseNumber}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCHouseNumber",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Número",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "{City}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCity",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Cidade",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "{PostalCode}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCPostalCode",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "CEP",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FCCountry",
+							"IsEditable": true,
+							"IsVisible": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "País",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": [
+								{
+									"DisplayValue": "Brasil",
+									"ReturnValue": "BR"
+								},
+								{
+									"DisplayValue": "EUA",
+									"ReturnValue": "US"
+								},
+								{
+									"DisplayValue": "Alemanha",
+									"ReturnValue": "DE"
+								},
+								{
+									"DisplayValue": "Itália",
+									"ReturnValue": "IT"
+								},
+								{
+									"DisplayValue": "Argentina",
+									"ReturnValue": "AR"
+								},
+								{
+									"DisplayValue": "Espanha",
+									"ReturnValue": "ES"
+								},
+								{
+									"DisplayValue": "Canada",
+									"ReturnValue": "CA"
+								},
+								{
+									"DisplayValue": "Mexico",
+									"ReturnValue": "MX"
+								},
+								{
+									"DisplayValue": "França",
+									"ReturnValue": "FR"
+								},
+								{
+									"DisplayValue": "Japão",
+									"ReturnValue": "JP"
+								},
+								{
+									"DisplayValue": "Austria",
+									"ReturnValue": "AT"
+								},
+								{
+									"DisplayValue": "China",
+									"ReturnValue": "CH"
+								},
+								{
+									"DisplayValue": "Africa do sul",
+									"ReturnValue": "ZA"
+								},
+								{
+									"DisplayValue": "Grã Bretanha",
+									"ReturnValue": "GB"
+								}
+							]
+						}
+					],
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Customers_Edit",
+	"Caption": "Alterar Clientes",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Item",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

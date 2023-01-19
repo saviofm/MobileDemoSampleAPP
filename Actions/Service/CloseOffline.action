@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/MobileDemoSampleApp/Services/SampleServiceV2.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/MobileDemoSampleApp/Actions/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/MobileDemoSampleApp/Actions/Service/CloseOfflineFailureMessage.action"
+}

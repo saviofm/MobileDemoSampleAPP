@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": " O endereço de e-mail não está no formato correto",
+	"Title": "Validação de email",
+	"OKCaption": "OK"
+}

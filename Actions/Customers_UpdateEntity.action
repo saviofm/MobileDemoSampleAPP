@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Customers_UpdateEntity"
+	},
+	"OnFailure": "/MobileDemoSampleApp/Actions/UpdateCustomerEntityFailureMessage.action",
+	"OnSuccess": "/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action",
+	"ValidationRule": "/MobileDemoSampleApp/Rules/EmailValidation.js",
+	"Target": {
+		"Service": "/MobileDemoSampleApp/Services/SampleServiceV2.service",
+		"EntitySet": "Customers",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"City": "#Page:Customers_Edit/#Control:FCCity/#Value",
+		"Country": "#Page:Customers_Edit/#Control:FCCountry/#SelectedValue",
+		"EmailAddress": "#Page:Customers_Edit/#Control:FCEmail/#Value",
+		"FirstName": "#Page:Customers_Edit/#Control:FCFirstName/#Value",
+		"HouseNumber": "#Page:Customers_Edit/#Control:FCHouseNumber/#Value",
+		"LastName": "#Page:Customers_Edit/#Control:FCLastName/#Value",
+		"PhoneNumber": "#Page:Customers_Edit/#Control:FCPhone/#Value",
+		"PostalCode": "#Page:Customers_Edit/#Control:FCPostalCode/#Value",
+		"Street": "#Page:Customers_Edit/#Control:FCStreet/#Value"
+	}
+}
