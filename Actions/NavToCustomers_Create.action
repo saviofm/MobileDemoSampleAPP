@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToCustomers_Create"
+	},
+	"PageToOpen": "/MobileDemoSampleApp/Pages/Customers_Create.page",
+	"ModalPage": true
+}

@@ -1,0 +1,24 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Customers_CreateEntity"
+	},
+	"OnFailure": "/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action",
+	"OnSuccess": "/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action",
+	"Target": {
+		"Service": "/MobileDemoSampleApp/Services/SampleServiceV2.service",
+		"EntitySet": "Customers"
+	},
+	"Properties": {
+		"City": "#Page:Customers_Create/#Control:FCCreateCity/#Value",
+		"Country": "#Page:Customers_Create/#Control:FCCreateCountry/#SelectedValue",
+		"DateOfBirth": "#Page:Customers_Create/#Control:FCCreateDOB/#Value",
+		"EmailAddress": "#Page:Customers_Create/#Control:FCCreateEmailAddress/#Value",
+		"FirstName": "#Page:Customers_Create/#Control:FCCreateFirstName/#Value",
+		"HouseNumber": "#Page:Customers_Create/#Control:FCCreateHouseNumber/#Value",
+		"LastName": "#Page:Customers_Create/#Control:FCCreateLastName/#Value",
+		"PhoneNumber": "#Page:Customers_Create/#Control:FCCreatePhoneNumber/#Value",
+		"PostalCode": "#Page:Customers_Create/#Control:FCCreatePostalCode/#Value",
+		"Street": "#Page:Customers_Create/#Control:FCCreateStreet/#Value"
+	}
+}

@@ -7,9 +7,8 @@
 				{
 					"Controls": [
 						{
-							"Value": "{FirstName}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCFirstName",
+							"_Name": "FCCreateFirstName",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Nome",
@@ -17,9 +16,8 @@
 							"Enabled": true
 						},
 						{
-							"Value": "{LastName}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCLastName",
+							"_Name": "FCCreateLastName",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Sobrenome",
@@ -27,9 +25,8 @@
 							"Enabled": true
 						},
 						{
-							"Value": "{PhoneNumber}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCPhone",
+							"_Name": "FCCreatePhoneNumber",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Tel.",
@@ -38,9 +35,8 @@
 							"Enabled": true
 						},
 						{
-							"Value": "{EmailAddress}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCEmail",
+							"_Name": "FCCreateEmailAddress",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Email",
@@ -49,18 +45,17 @@
 							"Enabled": true
 						},
 						{
-							"Value": "{DateOfBirth}",
+							"Value": "2000-01-01T00:00:01",
 							"_Type": "Control.Type.FormCell.DatePicker",
-							"_Name": "FCDOB",
+							"_Name": "FCCreateDOB",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Dt. Nasc.",
-							"Mode": "Date"
+							"Mode": "Datetime"
 						},
 						{
-							"Value": "{Street}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCStreet",
+							"_Name": "FCCreateStreet",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Endereço",
@@ -68,19 +63,18 @@
 							"Enabled": true
 						},
 						{
-							"Value": "{HouseNumber}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCHouseNumber",
+							"_Name": "FCCreateHouseNumber",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Número",
 							"PlaceHolder": "Digitar Valor",
+							"KeyboardType": "Number",
 							"Enabled": true
 						},
 						{
-							"Value": "{City}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCCity",
+							"_Name": "FCCreateCity",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "Cidade",
@@ -88,9 +82,8 @@
 							"Enabled": true
 						},
 						{
-							"Value": "{PostalCode}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "FCPostalCode",
+							"_Name": "FCCreatePostalCode",
 							"IsEditable": true,
 							"IsVisible": true,
 							"Caption": "CEP",
@@ -98,11 +91,8 @@
 							"Enabled": true
 						},
 						{
-							"Value": [
-								"{Country}"
-							],
 							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "FCCountry",
+							"_Name": "FCCreateCountry",
 							"IsEditable": true,
 							"IsVisible": true,
 							"AllowMultipleSelection": false,
@@ -117,9 +107,6 @@
 							"IsPickerDismissedOnSelection": false,
 							"IsSearchCancelledAfterSelection": false,
 							"AllowDefaultValueIfOneItem": false,
-							"Search": {
-								"Placeholder": "Selecionar"
-							},
 							"PickerItems": [
 								{
 									"DisplayValue": "Brasil",
@@ -139,7 +126,7 @@
 								},
 								{
 									"DisplayValue": "Argentina",
-									"ReturnValue": "AR"
+									"ReturnValue": "AG"
 								},
 								{
 									"DisplayValue": "Espanha",
@@ -186,8 +173,8 @@
 		}
 	],
 	"_Type": "Page",
-	"_Name": "Customers_Edit",
-	"Caption": "Alterar Clientes",
+	"_Name": "Customers_Create",
+	"Caption": "Criar Cliente",
 	"ActionBar": {
 		"Items": [
 			{
@@ -206,7 +193,7 @@
 				"Position": "Right",
 				"IsIconCircular": false,
 				"Visible": true,
-				"OnPress": "/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action"
+				"OnPress": "/MobileDemoSampleApp/Actions/Customers_CreateEntity.action"
 			}
 		],
 		"_Name": "ActionBar1"

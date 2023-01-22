@@ -133,6 +133,54 @@ function AppUpdateSuccess(clientAPI) {
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Rules/CreateEmailValidation.js":
+/*!******************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Rules/CreateEmailValidation.js ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EmailValidation)
+/* harmony export */ });
+function EmailValidation(context) {
+  //The following evaluateTargetPath will retrieve the current value of the email control
+  if (context.evaluateTargetPath('#Control:FCCreateEmail/#Value').indexOf('@') === -1) {
+    //If email value does not contain @ display a validation failure message to the end-user
+    context.executeAction('/MobileDemoSampleApp/Actions/ValidationFailure.action');
+  } else {
+    //If @ is present in the email value, return true to indicate validation is successful
+    return true;
+  }
+}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js":
+/*!************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EmailValidation)
+/* harmony export */ });
+function EmailValidation(context) {
+  //The following evaluateTargetPath will retrieve the current value of the email control
+  if (context.evaluateTargetPath('#Control:FCEmail/#Value').indexOf('@') === -1) {
+    //If email value does not contain @ display a validation failure message to the end-user
+    context.executeAction('/MobileDemoSampleApp/Actions/ValidationFailure.action');
+  } else {
+    //If @ is present in the email value, return true to indicate validation is successful
+    return true;
+  }
+}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js":
 /*!****************************************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js ***!
@@ -403,7 +451,17 @@ module.exports = function cssWithMappingToString(item) {
   \************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ContactCell","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","QueryOptions":"$orderby=LastName"},"_Name":"SectionContactCell0","Visible":true,"EmptySection":{"FooterVisible":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"ContactCell":{"ContextMenu":{"PerformFirstActionWithFullSwipe":true,"Items":[]},"DetailImage":"","Headline":"{FirstName}","Subheadline":"{LastName}","Description":"{City}","OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Detail.action","ActivityItems":[{"_Name":"SectionContactCell0ActivityItems0","ActivityType":"Phone","ActivityValue":"{PhoneNumber}"},{"_Name":"SectionContactCell0ActivityItems1","ActivityType":"Email","ActivityValue":"{EmailAddress}"}]},"Search":{"Enabled":true,"BarcodeScanner":true}}]}],"_Type":"Page","_Name":"Customer_List","Caption":"Customer","PrefersLargeCaption":true}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ContactCell","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","QueryOptions":"$orderby=LastName"},"_Name":"SectionContactCell0","Visible":true,"EmptySection":{"FooterVisible":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"ContactCell":{"ContextMenu":{"PerformFirstActionWithFullSwipe":true,"Items":[]},"DetailImage":"","Headline":"{FirstName}","Subheadline":"{LastName}","Description":"{City}","OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Detail.action","ActivityItems":[{"_Name":"SectionContactCell0ActivityItems0","ActivityType":"Phone","ActivityValue":"{PhoneNumber}"},{"_Name":"SectionContactCell0ActivityItems1","ActivityType":"Email","ActivityValue":"{EmailAddress}"}]},"Search":{"Enabled":true,"BarcodeScanner":true}}]}],"_Type":"Page","_Name":"Customer_List","Caption":"Customer","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Add","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Create.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Create.page":
+/*!***************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Pages/Customers_Create.page ***!
+  \***************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePhoneNumber","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateEmailAddress","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true},{"Value":"2000-01-01T00:00:01","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreateDOB","IsEditable":true,"IsVisible":true,"Caption":"Dt. Nasc.","Mode":"Datetime"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"Digitar Valor","KeyboardType":"Number","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCreateCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AG"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Create","Caption":"Criar Cliente","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_CreateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -423,7 +481,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \*************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"{FirstName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"{LastName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"{PhoneNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPhone","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"PlaceHolder","KeyboardType":"Phone","Enabled":true},{"Value":"{EmailAddress}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCEmail","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"PlaceHolder","KeyboardType":"Email","Enabled":true},{"Value":"{Street}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"{HouseNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"{City}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"{PostalCode}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":["{Country}"],"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"EUA","ReturnValue":"USA"},{"DisplayValue":"Alemanha","ReturnValue":"GER"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Edit","Caption":"Alterar Clientes","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"{FirstName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{LastName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{PhoneNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPhone","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true},{"Value":"{EmailAddress}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCEmail","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true},{"Value":"{DateOfBirth}","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCDOB","IsEditable":true,"IsVisible":true,"Caption":"Dt. Nasc.","Mode":"Date"},{"Value":"{Street}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{HouseNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{City}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{PostalCode}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":["{Country}"],"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"Search":{"Placeholder":"Selecionar"},"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AR"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Edit","Caption":"Alterar Clientes","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -537,13 +595,33 @@ module.exports = {"_Type":"Action.Type.ClosePage"}
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action":
+/*!*************************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action ***!
+  \*************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"CreateCustomerEntityFailureMessage"},"OnFailure":"/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","ValidationRule":"/MobileDemoSampleApp/Rules/CreateEmailValidation.js","Message":"Falha ao criar o registro do cliente - {#ActionResults:create/error}","Title":"Criar Cliente","OKCaption":"OK"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/Customers_CreateEntity.action":
+/*!*************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/Customers_CreateEntity.action ***!
+  \*************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult":{"_Name":"Customers_CreateEntity"},"OnFailure":"/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers"},"Properties":{"City":"#Page:Customers_Create/#Control:FCCreateCity/#Value","Country":"#Page:Customers_Create/#Control:FCCreateCountry/#SelectedValue","DateOfBirth":"#Page:Customers_Create/#Control:FCCreateDOB/#Value","EmailAddress":"#Page:Customers_Create/#Control:FCCreateEmailAddress/#Value","FirstName":"#Page:Customers_Create/#Control:FCCreateFirstName/#Value","HouseNumber":"#Page:Customers_Create/#Control:FCCreateHouseNumber/#Value","LastName":"#Page:Customers_Create/#Control:FCCreateLastName/#Value","PhoneNumber":"#Page:Customers_Create/#Control:FCCreatePhoneNumber/#Value","PostalCode":"#Page:Customers_Create/#Control:FCCreatePostalCode/#Value","Street":"#Page:Customers_Create/#Control:FCCreateStreet/#Value"}}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action":
 /*!*************************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action ***!
   \*************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","ActionResult":{"_Name":"Customers_UpdateEntity"},"OnFailure":"/MobileDemoSampleApp/Actions/UpdateCustomerEntityFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"},"Properties":{"City":"#Page:Customers_Edit/#Control:FCCity/#Value","Country":"#Page:Customers_Edit/#Control:FCCountry/#SelectedValue","EmailAddress":"#Page:Customers_Edit/#Control:FCEmail/#Value","FirstName":"#Page:Customers_Edit/#Control:FCFirstName/#Value","HouseNumber":"#Page:Customers_Edit/#Control:FCHouseNumber/#Value","LastName":"#Page:Customers_Edit/#Control:FCLastName/#Value","PhoneNumber":"#Page:Customers_Edit/#Control:FCPhone/#Value","PostalCode":"#Page:Customers_Edit/#Control:FCPostalCode/#Value","Street":"#Page:Customers_Edit/#Control:FCStreet/#Value"}}
+module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","ActionResult":{"_Name":"Customers_UpdateEntity"},"OnFailure":"/MobileDemoSampleApp/Actions/UpdateCustomerEntityFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","ValidationRule":"/MobileDemoSampleApp/Rules/EmailValidation.js","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"},"Properties":{"City":"#Page:Customers_Edit/#Control:FCCity/#Value","Country":"#Page:Customers_Edit/#Control:FCCountry/#SelectedValue","DateOfBirth":"#Page:Customers_Edit/#Control:FCDOB/#Value","EmailAddress":"#Page:Customers_Edit/#Control:FCEmail/#Value","FirstName":"#Page:Customers_Edit/#Control:FCFirstName/#Value","HouseNumber":"#Page:Customers_Edit/#Control:FCHouseNumber/#Value","LastName":"#Page:Customers_Edit/#Control:FCLastName/#Value","PhoneNumber":"#Page:Customers_Edit/#Control:FCPhone/#Value","PostalCode":"#Page:Customers_Edit/#Control:FCPostalCode/#Value","Street":"#Page:Customers_Edit/#Control:FCStreet/#Value"}}
 
 /***/ }),
 
@@ -594,6 +672,16 @@ module.exports = {"SkipReset":false,"_Type":"Action.Type.Logout"}
 /***/ ((module) => {
 
 module.exports = {"CancelCaption":"No","Message":"This action will remove all data and return to the Welcome screen. Any local data will be lost. Are you sure you want to continue?","OKCaption":"Yes","OnOK":"/MobileDemoSampleApp/Rules/ResetAppSettingsAndLogout.js","Title":"Logout","_Type":"Action.Type.Message"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Create.action":
+/*!************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Create.action ***!
+  \************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavToCustomers_Create"},"PageToOpen":"/MobileDemoSampleApp/Pages/Customers_Create.page","ModalPage":true}
 
 /***/ }),
 
@@ -767,6 +855,16 @@ module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"UpdateC
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/ValidationFailure.action":
+/*!********************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/ValidationFailure.action ***!
+  \********************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","Message":" O endereço de e-mail não está no formato correto","Title":"Validação de email","OKCaption":"OK"}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Globals/AppDefinition_Version.global":
 /*!************************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Globals/AppDefinition_Version.global ***!
@@ -833,12 +931,15 @@ let mobiledemosampleapp_actions_appupdatesuccessmessage_action = __webpack_requi
 let mobiledemosampleapp_actions_closemodalpage_cancel_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action */ "./build.definitions/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action")
 let mobiledemosampleapp_actions_closemodalpage_complete_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/CloseModalPage_Complete.action */ "./build.definitions/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action")
 let mobiledemosampleapp_actions_closepage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ClosePage.action */ "./build.definitions/MobileDemoSampleApp/Actions/ClosePage.action")
+let mobiledemosampleapp_actions_createcustomerentityfailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action")
+let mobiledemosampleapp_actions_customers_createentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_CreateEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_CreateEntity.action")
 let mobiledemosampleapp_actions_customers_updateentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_UpdateEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action")
 let mobiledemosampleapp_actions_errorarchive_errorarchive_syncfailure_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ErrorArchive/ErrorArchive_SyncFailure.action */ "./build.definitions/MobileDemoSampleApp/Actions/ErrorArchive/ErrorArchive_SyncFailure.action")
 let mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_detail_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_Detail.action */ "./build.definitions/MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_Detail.action")
 let mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_list_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_List.action */ "./build.definitions/MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_List.action")
 let mobiledemosampleapp_actions_logout_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Logout.action */ "./build.definitions/MobileDemoSampleApp/Actions/Logout.action")
 let mobiledemosampleapp_actions_logoutmessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/LogoutMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/LogoutMessage.action")
+let mobiledemosampleapp_actions_navtocustomers_create_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Create.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Create.action")
 let mobiledemosampleapp_actions_navtocustomers_detail_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Detail.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Detail.action")
 let mobiledemosampleapp_actions_navtocustomers_edit_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Edit.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action")
 let mobiledemosampleapp_actions_navtocustomers_list_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_List.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_List.action")
@@ -856,10 +957,12 @@ let mobiledemosampleapp_actions_service_syncstartedmessage_action = __webpack_re
 let mobiledemosampleapp_actions_service_syncsuccessmessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Service/SyncSuccessMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/Service/SyncSuccessMessage.action")
 let mobiledemosampleapp_actions_service_uploadoffline_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Service/UploadOffline.action */ "./build.definitions/MobileDemoSampleApp/Actions/Service/UploadOffline.action")
 let mobiledemosampleapp_actions_updatecustomerentityfailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/UpdateCustomerEntityFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/UpdateCustomerEntityFailureMessage.action")
+let mobiledemosampleapp_actions_validationfailure_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ValidationFailure.action */ "./build.definitions/MobileDemoSampleApp/Actions/ValidationFailure.action")
 let mobiledemosampleapp_globals_appdefinition_version_global = __webpack_require__(/*! ./MobileDemoSampleApp/Globals/AppDefinition_Version.global */ "./build.definitions/MobileDemoSampleApp/Globals/AppDefinition_Version.global")
 let mobiledemosampleapp_i18n_i18n_properties = __webpack_require__(/*! ./MobileDemoSampleApp/i18n/i18n.properties */ "./build.definitions/MobileDemoSampleApp/i18n/i18n.properties")
 let mobiledemosampleapp_jsconfig_json = __webpack_require__(/*! ./MobileDemoSampleApp/jsconfig.json */ "./build.definitions/MobileDemoSampleApp/jsconfig.json")
 let mobiledemosampleapp_pages_customer_list_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customer_List.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customer_List.page")
+let mobiledemosampleapp_pages_customers_create_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Create.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Create.page")
 let mobiledemosampleapp_pages_customers_detail_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Detail.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Detail.page")
 let mobiledemosampleapp_pages_customers_edit_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Edit.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Edit.page")
 let mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_Detail.page */ "./build.definitions/MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_Detail.page")
@@ -867,6 +970,8 @@ let mobiledemosampleapp_pages_errorarchive_errorarchive_list_page = __webpack_re
 let mobiledemosampleapp_pages_main_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Main.page */ "./build.definitions/MobileDemoSampleApp/Pages/Main.page")
 let mobiledemosampleapp_rules_appupdatefailure_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateFailure.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateFailure.js")
 let mobiledemosampleapp_rules_appupdatesuccess_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateSuccess.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateSuccess.js")
+let mobiledemosampleapp_rules_createemailvalidation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/CreateEmailValidation.js */ "./build.definitions/MobileDemoSampleApp/Rules/CreateEmailValidation.js")
+let mobiledemosampleapp_rules_emailvalidation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/EmailValidation.js */ "./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js")
 let mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js */ "./build.definitions/MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js")
 let mobiledemosampleapp_rules_onwillupdate_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/OnWillUpdate.js */ "./build.definitions/MobileDemoSampleApp/Rules/OnWillUpdate.js")
 let mobiledemosampleapp_rules_resetappsettingsandlogout_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/ResetAppSettingsAndLogout.js */ "./build.definitions/MobileDemoSampleApp/Rules/ResetAppSettingsAndLogout.js")
@@ -887,12 +992,15 @@ module.exports = {
 	mobiledemosampleapp_actions_closemodalpage_cancel_action : mobiledemosampleapp_actions_closemodalpage_cancel_action,
 	mobiledemosampleapp_actions_closemodalpage_complete_action : mobiledemosampleapp_actions_closemodalpage_complete_action,
 	mobiledemosampleapp_actions_closepage_action : mobiledemosampleapp_actions_closepage_action,
+	mobiledemosampleapp_actions_createcustomerentityfailuremessage_action : mobiledemosampleapp_actions_createcustomerentityfailuremessage_action,
+	mobiledemosampleapp_actions_customers_createentity_action : mobiledemosampleapp_actions_customers_createentity_action,
 	mobiledemosampleapp_actions_customers_updateentity_action : mobiledemosampleapp_actions_customers_updateentity_action,
 	mobiledemosampleapp_actions_errorarchive_errorarchive_syncfailure_action : mobiledemosampleapp_actions_errorarchive_errorarchive_syncfailure_action,
 	mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_detail_action : mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_detail_action,
 	mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_list_action : mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_list_action,
 	mobiledemosampleapp_actions_logout_action : mobiledemosampleapp_actions_logout_action,
 	mobiledemosampleapp_actions_logoutmessage_action : mobiledemosampleapp_actions_logoutmessage_action,
+	mobiledemosampleapp_actions_navtocustomers_create_action : mobiledemosampleapp_actions_navtocustomers_create_action,
 	mobiledemosampleapp_actions_navtocustomers_detail_action : mobiledemosampleapp_actions_navtocustomers_detail_action,
 	mobiledemosampleapp_actions_navtocustomers_edit_action : mobiledemosampleapp_actions_navtocustomers_edit_action,
 	mobiledemosampleapp_actions_navtocustomers_list_action : mobiledemosampleapp_actions_navtocustomers_list_action,
@@ -910,10 +1018,12 @@ module.exports = {
 	mobiledemosampleapp_actions_service_syncsuccessmessage_action : mobiledemosampleapp_actions_service_syncsuccessmessage_action,
 	mobiledemosampleapp_actions_service_uploadoffline_action : mobiledemosampleapp_actions_service_uploadoffline_action,
 	mobiledemosampleapp_actions_updatecustomerentityfailuremessage_action : mobiledemosampleapp_actions_updatecustomerentityfailuremessage_action,
+	mobiledemosampleapp_actions_validationfailure_action : mobiledemosampleapp_actions_validationfailure_action,
 	mobiledemosampleapp_globals_appdefinition_version_global : mobiledemosampleapp_globals_appdefinition_version_global,
 	mobiledemosampleapp_i18n_i18n_properties : mobiledemosampleapp_i18n_i18n_properties,
 	mobiledemosampleapp_jsconfig_json : mobiledemosampleapp_jsconfig_json,
 	mobiledemosampleapp_pages_customer_list_page : mobiledemosampleapp_pages_customer_list_page,
+	mobiledemosampleapp_pages_customers_create_page : mobiledemosampleapp_pages_customers_create_page,
 	mobiledemosampleapp_pages_customers_detail_page : mobiledemosampleapp_pages_customers_detail_page,
 	mobiledemosampleapp_pages_customers_edit_page : mobiledemosampleapp_pages_customers_edit_page,
 	mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page : mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page,
@@ -921,6 +1031,8 @@ module.exports = {
 	mobiledemosampleapp_pages_main_page : mobiledemosampleapp_pages_main_page,
 	mobiledemosampleapp_rules_appupdatefailure_js : mobiledemosampleapp_rules_appupdatefailure_js,
 	mobiledemosampleapp_rules_appupdatesuccess_js : mobiledemosampleapp_rules_appupdatesuccess_js,
+	mobiledemosampleapp_rules_createemailvalidation_js : mobiledemosampleapp_rules_createemailvalidation_js,
+	mobiledemosampleapp_rules_emailvalidation_js : mobiledemosampleapp_rules_emailvalidation_js,
 	mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js : mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js,
 	mobiledemosampleapp_rules_onwillupdate_js : mobiledemosampleapp_rules_onwillupdate_js,
 	mobiledemosampleapp_rules_resetappsettingsandlogout_js : mobiledemosampleapp_rules_resetappsettingsandlogout_js,

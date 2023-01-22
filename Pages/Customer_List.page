@@ -54,5 +54,19 @@
 	"_Type": "Page",
 	"_Name": "Customer_List",
 	"Caption": "Customer",
-	"PrefersLargeCaption": true
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"SystemItem": "Add",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MobileDemoSampleApp/Actions/NavToCustomers_Create.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }

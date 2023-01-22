@@ -1,0 +1,12 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "CreateCustomerEntityFailureMessage"
+	},
+	"OnFailure": "/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action",
+	"OnSuccess": "/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action",
+	"ValidationRule": "/MobileDemoSampleApp/Rules/CreateEmailValidation.js",
+	"Message": "Falha ao criar o registro do cliente - {#ActionResults:create/error}",
+	"Title": "Criar Cliente",
+	"OKCaption": "OK"
+}

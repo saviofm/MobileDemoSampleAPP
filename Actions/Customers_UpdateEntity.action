@@ -14,6 +14,7 @@
 	"Properties": {
 		"City": "#Page:Customers_Edit/#Control:FCCity/#Value",
 		"Country": "#Page:Customers_Edit/#Control:FCCountry/#SelectedValue",
+		"DateOfBirth": "#Page:Customers_Edit/#Control:FCDOB/#Value",
 		"EmailAddress": "#Page:Customers_Edit/#Control:FCEmail/#Value",
 		"FirstName": "#Page:Customers_Edit/#Control:FCFirstName/#Value",
 		"HouseNumber": "#Page:Customers_Edit/#Control:FCHouseNumber/#Value",
