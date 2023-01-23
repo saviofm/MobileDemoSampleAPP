@@ -157,6 +157,29 @@ function EmailValidation(context) {
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js":
+/*!*************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ DeleteConfirmation)
+/* harmony export */ });
+function DeleteConfirmation(context) {
+  return context.executeAction('/MobileDemoSampleApp/Actions/DeleteConfirmation.action').then(result => {
+    if (result.data) {
+      return context.executeAction('/MobileDemoSampleApp/Actions/Customers_DeleteEntity.action').then(success => Promise.resolve(success), failure => Promise.reject('Delete entity failed ' + failure));
+    } else {
+      return Promise.reject('User Deferred');
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js":
 /*!************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js ***!
@@ -471,7 +494,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"Endereço","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"Cidade","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"CEP","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"País","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"Detalhes","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"Endereço","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"Cidade","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"CEP","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"País","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"Detalhes","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -511,7 +534,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \***************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton0","Title":"Clientes","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://customer","ImagePosition":"Leading","FullWidth":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_List.action"}]}]}],"_Type":"Page","_Name":"Main","Caption":"Main","PrefersLargeCaption":true,"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"LogoutToolbarItem","Caption":"Logout","Enabled":true,"Visible":true,"Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/LogoutMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UploadToolbarItem","Caption":"Sync","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/Service/SyncStartedMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UpdateToolbarItem","Caption":"Update","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/AppUpdateProgressBanner.action"}]}}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton0","Title":"Clientes","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://customer","ImagePosition":"Leading","FullWidth":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_List.action"}]}]}],"_Type":"Page","_Name":"Main","Caption":"Main","PrefersLargeCaption":true,"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"LogoutToolbarItem","Caption":"Logout","Enabled":true,"Visible":true,"Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/LogoutMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UploadToolbarItem","Caption":"Sync","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/Service/SyncStartedMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UpdateToolbarItem","Caption":"Update","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/AppUpdateProgressBanner.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"Upload Logs","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/LogUpload.action"}]}}
 
 /***/ }),
 
@@ -615,6 +638,16 @@ module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult"
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/Customers_DeleteEntity.action":
+/*!*************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/Customers_DeleteEntity.action ***!
+  \*************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.DeleteEntity","ActionResult":{"_Name":"delete"},"OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"}}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action":
 /*!*************************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action ***!
@@ -622,6 +655,26 @@ module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult"
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","ActionResult":{"_Name":"Customers_UpdateEntity"},"OnFailure":"/MobileDemoSampleApp/Actions/UpdateCustomerEntityFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","ValidationRule":"/MobileDemoSampleApp/Rules/EmailValidation.js","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"},"Properties":{"City":"#Page:Customers_Edit/#Control:FCCity/#Value","Country":"#Page:Customers_Edit/#Control:FCCountry/#SelectedValue","DateOfBirth":"#Page:Customers_Edit/#Control:FCDOB/#Value","EmailAddress":"#Page:Customers_Edit/#Control:FCEmail/#Value","FirstName":"#Page:Customers_Edit/#Control:FCFirstName/#Value","HouseNumber":"#Page:Customers_Edit/#Control:FCHouseNumber/#Value","LastName":"#Page:Customers_Edit/#Control:FCLastName/#Value","PhoneNumber":"#Page:Customers_Edit/#Control:FCPhone/#Value","PostalCode":"#Page:Customers_Edit/#Control:FCPostalCode/#Value","Street":"#Page:Customers_Edit/#Control:FCStreet/#Value"}}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/DeleteConfirmation.action":
+/*!*********************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/DeleteConfirmation.action ***!
+  \*********************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","Message":"Eliminar cliente?","Title":"Confirmação","OKCaption":"OK","CancelCaption":"Cancelar"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/DeleteCustomerEntityFailureMessage.action":
+/*!*************************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/DeleteCustomerEntityFailureMessage.action ***!
+  \*************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"DeleteCustomerEntityFailureMessage"},"Message":"Erro ao eliminar cliente - {#ActionResults:delete/error}","Title":"Eliminar cliente","OKCaption":"OK"}
 
 /***/ }),
 
@@ -652,6 +705,56 @@ module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MobileDemoSamp
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_List.page","NavigationType":"Inner"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/LogSetLevel.action":
+/*!**************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/LogSetLevel.action ***!
+  \**************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Logger.SetLevel","ActionResult":{"_Name":"LogSetLevel"},"Level":"Trace"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/LogSetState.action":
+/*!**************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/LogSetState.action ***!
+  \**************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Logger.SetState","ActionResult":{"_Name":"LogSetState"},"OnSuccess":"/MobileDemoSampleApp/Actions/LogSetState.action","LoggerState":"On"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/LogUpload.action":
+/*!************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/LogUpload.action ***!
+  \************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Logger.Upload","ActionResult":{"_Name":"LogUpload"}}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/LogUploadFailure.action":
+/*!*******************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/LogUploadFailure.action ***!
+  \*******************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"LogUploadFailure"},"Message":"Erro ao fazer upload de logs  - {#ActionResults:logupload/error}","Title":"Upload de logs","OKCaption":"OK"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/LogUploadSuccessful.action":
+/*!**********************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/LogUploadSuccessful.action ***!
+  \**********************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ToastMessage","ActionResult":{"_Name":"LogUploadSuccessful"},"Message":"Arquivo de log upload","NumberOfLines":1,"Duration":3,"IsIconHidden":true,"Animated":true}
 
 /***/ }),
 
@@ -781,7 +884,7 @@ module.exports = {"Message":"Download in progress...","CompletionMessage":"Downl
   \****************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","DefiningRequests":[{"Name":"Customers","Query":"Customers"},{"Name":"Products","Query":"Products"},{"Name":"SalesOrderHeaders","Query":"SalesOrderHeaders"},{"Name":"SalesOrderItems","Query":"SalesOrderItems"}],"_Type":"Action.Type.ODataService.Initialize","ShowActivityIndicator":true,"ActivityIndicatorText":"Downloading...","ActionResult":{"_Name":"init"},"OnSuccess":"/MobileDemoSampleApp/Actions/Service/InitializeOfflineSuccessMessage.action","OnFailure":"/MobileDemoSampleApp/Actions/Service/InitializeOfflineFailureMessage.action"}
+module.exports = {"_Type":"Action.Type.ODataService.Initialize","ActionResult":{"_Name":"init"},"OnFailure":"/MobileDemoSampleApp/Actions/Service/InitializeOfflineFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/LogSetState.action","ShowActivityIndicator":true,"ActivityIndicatorText":"Downloading...","Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","DefiningRequests":[{"Name":"Customers","Query":"Customers"},{"Name":"Products","Query":"Products"},{"Name":"SalesOrderHeaders","Query":"SalesOrderHeaders"},{"Name":"SalesOrderItems","Query":"SalesOrderItems"}]}
 
 /***/ }),
 
@@ -933,12 +1036,20 @@ let mobiledemosampleapp_actions_closemodalpage_complete_action = __webpack_requi
 let mobiledemosampleapp_actions_closepage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ClosePage.action */ "./build.definitions/MobileDemoSampleApp/Actions/ClosePage.action")
 let mobiledemosampleapp_actions_createcustomerentityfailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action")
 let mobiledemosampleapp_actions_customers_createentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_CreateEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_CreateEntity.action")
+let mobiledemosampleapp_actions_customers_deleteentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_DeleteEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_DeleteEntity.action")
 let mobiledemosampleapp_actions_customers_updateentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_UpdateEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action")
+let mobiledemosampleapp_actions_deleteconfirmation_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/DeleteConfirmation.action */ "./build.definitions/MobileDemoSampleApp/Actions/DeleteConfirmation.action")
+let mobiledemosampleapp_actions_deletecustomerentityfailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/DeleteCustomerEntityFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/DeleteCustomerEntityFailureMessage.action")
 let mobiledemosampleapp_actions_errorarchive_errorarchive_syncfailure_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ErrorArchive/ErrorArchive_SyncFailure.action */ "./build.definitions/MobileDemoSampleApp/Actions/ErrorArchive/ErrorArchive_SyncFailure.action")
 let mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_detail_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_Detail.action */ "./build.definitions/MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_Detail.action")
 let mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_list_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_List.action */ "./build.definitions/MobileDemoSampleApp/Actions/ErrorArchive/NavToErrorArchive_List.action")
 let mobiledemosampleapp_actions_logout_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Logout.action */ "./build.definitions/MobileDemoSampleApp/Actions/Logout.action")
 let mobiledemosampleapp_actions_logoutmessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/LogoutMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/LogoutMessage.action")
+let mobiledemosampleapp_actions_logsetlevel_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/LogSetLevel.action */ "./build.definitions/MobileDemoSampleApp/Actions/LogSetLevel.action")
+let mobiledemosampleapp_actions_logsetstate_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/LogSetState.action */ "./build.definitions/MobileDemoSampleApp/Actions/LogSetState.action")
+let mobiledemosampleapp_actions_logupload_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/LogUpload.action */ "./build.definitions/MobileDemoSampleApp/Actions/LogUpload.action")
+let mobiledemosampleapp_actions_loguploadfailure_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/LogUploadFailure.action */ "./build.definitions/MobileDemoSampleApp/Actions/LogUploadFailure.action")
+let mobiledemosampleapp_actions_loguploadsuccessful_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/LogUploadSuccessful.action */ "./build.definitions/MobileDemoSampleApp/Actions/LogUploadSuccessful.action")
 let mobiledemosampleapp_actions_navtocustomers_create_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Create.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Create.action")
 let mobiledemosampleapp_actions_navtocustomers_detail_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Detail.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Detail.action")
 let mobiledemosampleapp_actions_navtocustomers_edit_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Edit.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action")
@@ -971,6 +1082,7 @@ let mobiledemosampleapp_pages_main_page = __webpack_require__(/*! ./MobileDemoSa
 let mobiledemosampleapp_rules_appupdatefailure_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateFailure.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateFailure.js")
 let mobiledemosampleapp_rules_appupdatesuccess_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateSuccess.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateSuccess.js")
 let mobiledemosampleapp_rules_createemailvalidation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/CreateEmailValidation.js */ "./build.definitions/MobileDemoSampleApp/Rules/CreateEmailValidation.js")
+let mobiledemosampleapp_rules_customers_deleteconfirmation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js */ "./build.definitions/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js")
 let mobiledemosampleapp_rules_emailvalidation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/EmailValidation.js */ "./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js")
 let mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js */ "./build.definitions/MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js")
 let mobiledemosampleapp_rules_onwillupdate_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/OnWillUpdate.js */ "./build.definitions/MobileDemoSampleApp/Rules/OnWillUpdate.js")
@@ -994,12 +1106,20 @@ module.exports = {
 	mobiledemosampleapp_actions_closepage_action : mobiledemosampleapp_actions_closepage_action,
 	mobiledemosampleapp_actions_createcustomerentityfailuremessage_action : mobiledemosampleapp_actions_createcustomerentityfailuremessage_action,
 	mobiledemosampleapp_actions_customers_createentity_action : mobiledemosampleapp_actions_customers_createentity_action,
+	mobiledemosampleapp_actions_customers_deleteentity_action : mobiledemosampleapp_actions_customers_deleteentity_action,
 	mobiledemosampleapp_actions_customers_updateentity_action : mobiledemosampleapp_actions_customers_updateentity_action,
+	mobiledemosampleapp_actions_deleteconfirmation_action : mobiledemosampleapp_actions_deleteconfirmation_action,
+	mobiledemosampleapp_actions_deletecustomerentityfailuremessage_action : mobiledemosampleapp_actions_deletecustomerentityfailuremessage_action,
 	mobiledemosampleapp_actions_errorarchive_errorarchive_syncfailure_action : mobiledemosampleapp_actions_errorarchive_errorarchive_syncfailure_action,
 	mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_detail_action : mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_detail_action,
 	mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_list_action : mobiledemosampleapp_actions_errorarchive_navtoerrorarchive_list_action,
 	mobiledemosampleapp_actions_logout_action : mobiledemosampleapp_actions_logout_action,
 	mobiledemosampleapp_actions_logoutmessage_action : mobiledemosampleapp_actions_logoutmessage_action,
+	mobiledemosampleapp_actions_logsetlevel_action : mobiledemosampleapp_actions_logsetlevel_action,
+	mobiledemosampleapp_actions_logsetstate_action : mobiledemosampleapp_actions_logsetstate_action,
+	mobiledemosampleapp_actions_logupload_action : mobiledemosampleapp_actions_logupload_action,
+	mobiledemosampleapp_actions_loguploadfailure_action : mobiledemosampleapp_actions_loguploadfailure_action,
+	mobiledemosampleapp_actions_loguploadsuccessful_action : mobiledemosampleapp_actions_loguploadsuccessful_action,
 	mobiledemosampleapp_actions_navtocustomers_create_action : mobiledemosampleapp_actions_navtocustomers_create_action,
 	mobiledemosampleapp_actions_navtocustomers_detail_action : mobiledemosampleapp_actions_navtocustomers_detail_action,
 	mobiledemosampleapp_actions_navtocustomers_edit_action : mobiledemosampleapp_actions_navtocustomers_edit_action,
@@ -1032,6 +1152,7 @@ module.exports = {
 	mobiledemosampleapp_rules_appupdatefailure_js : mobiledemosampleapp_rules_appupdatefailure_js,
 	mobiledemosampleapp_rules_appupdatesuccess_js : mobiledemosampleapp_rules_appupdatesuccess_js,
 	mobiledemosampleapp_rules_createemailvalidation_js : mobiledemosampleapp_rules_createemailvalidation_js,
+	mobiledemosampleapp_rules_customers_deleteconfirmation_js : mobiledemosampleapp_rules_customers_deleteconfirmation_js,
 	mobiledemosampleapp_rules_emailvalidation_js : mobiledemosampleapp_rules_emailvalidation_js,
 	mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js : mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js,
 	mobiledemosampleapp_rules_onwillupdate_js : mobiledemosampleapp_rules_onwillupdate_js,

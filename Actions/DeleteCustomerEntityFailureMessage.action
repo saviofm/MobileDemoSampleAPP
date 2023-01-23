@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "DeleteCustomerEntityFailureMessage"
+	},
+	"Message": "Erro ao eliminar cliente - {#ActionResults:delete/error}",
+	"Title": "Eliminar cliente",
+	"OKCaption": "OK"
+}

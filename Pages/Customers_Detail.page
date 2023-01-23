@@ -75,6 +75,15 @@
 				"IsIconCircular": false,
 				"Visible": true,
 				"OnPress": "/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Item",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"
 			}
 		],
 		"_Name": "ActionBar1"

@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.Logger.Upload",
+	"ActionResult": {
+		"_Name": "LogUpload"
+	},
+	"OnFailure": "/MobileDemoSampleApp/Actions/LogUploadFailure.action",
+	"OnSuccess": "/MobileDemoSampleApp/Actions/LogUploadSuccessful.action"
+}

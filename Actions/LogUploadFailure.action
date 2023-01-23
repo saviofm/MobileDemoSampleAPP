@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "LogUploadFailure"
+	},
+	"Message": "Erro ao fazer upload de logs  - {#ActionResults:logupload/error}",
+	"Title": "Upload de logs",
+	"OKCaption": "OK"
+}

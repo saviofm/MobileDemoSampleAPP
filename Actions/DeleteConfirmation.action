@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": "Eliminar cliente?",
+	"Title": "Confirmação",
+	"OKCaption": "OK",
+	"CancelCaption": "Cancelar"
+}

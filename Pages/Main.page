@@ -66,6 +66,16 @@
 				"Visible": "$(PLT,true,true,false)",
 				"Clickable": true,
 				"OnPress": "/MobileDemoSampleApp/Actions/AppUpdateProgressBanner.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem0",
+				"Caption": "Upload Logs",
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/MobileDemoSampleApp/Actions/LogUpload.action"
 			}
 		]
 	}
