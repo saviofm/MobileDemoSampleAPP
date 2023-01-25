@@ -516,7 +516,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"Endereço","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"Cidade","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"CEP","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"País","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"{@odata.readLink}/SalesOrders","QueryOptions":"$top=5&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Header":{"_Name":"SectionHeader0","UseTopPadding":true,"Caption":"Ordens"},"Footer":{"_Name":"SectionFooter0","Caption":"Ver todas ordens","AttributeLabel":"/MobileDemoSampleApp/Rules/Customers_OrderCount.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action","UseBottomPadding":false},"Visible":true,"EmptySection":{"Caption":"Nenhuma ordem de cliente encontrada","FooterVisible":false},"ObjectCell":{"Title":"{SalesOrderId}","Subhead":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{CurrencyCode}","PreserveIconStackSpacing":false,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false,"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true}},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"Detalhes","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"Endereço","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"Cidade","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"CEP","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"País","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","UseTopPadding":true,"Caption":"Ordens"},"Footer":{"_Name":"SectionFooter0","Caption":"Ver todas ordens","AttributeLabel":"/MobileDemoSampleApp/Rules/Customers_OrderCount.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action","UseBottomPadding":false},"_Type":"Section.Type.ObjectTable","DataSubscriptions":["SalesOrderHeaders"],"Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"{@odata.readLink}/SalesOrders","QueryOptions":"$top=5&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem de cliente encontrada","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{CurrencyCode}","PreserveIconStackSpacing":false,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"Detalhes","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"}],"_Name":"ActionBar1"},"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"Criar Ordem","Enabled":true,"Visible":true,"Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action"}]}}
 
 /***/ }),
 
@@ -536,7 +536,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"SalesOrderHeaders","QueryOptions":"$filter=CustomerId eq '{CustomerId}'&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem encontrada","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"{CustomerId}","Description":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{LifeCycleStatusName}","PreserveIconStackSpacing":true,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"Search":{"Enabled":true,"BarcodeScanner":true},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Orders","Caption":"Customers_Orders","PrefersLargeCaption":true}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"SalesOrderHeaders","QueryOptions":"$filter=CustomerId eq '{CustomerId}'&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem encontrada","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"{CustomerId}","Description":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{LifeCycleStatusName}","PreserveIconStackSpacing":true,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"Search":{"Enabled":true,"BarcodeScanner":true},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Orders","Caption":"Ordens do Cliente","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -567,6 +567,16 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
 /***/ ((module) => {
 
 module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton0","Title":"Clientes","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://customer","ImagePosition":"Leading","FullWidth":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_List.action"}]}]}],"_Type":"Page","_Name":"Main","Caption":"Main","PrefersLargeCaption":true,"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"LogoutToolbarItem","Caption":"Logout","Enabled":true,"Visible":true,"Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/LogoutMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UploadToolbarItem","Caption":"Sync","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/Service/SyncStartedMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UpdateToolbarItem","Caption":"Update","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/AppUpdateProgressBanner.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"Upload Logs","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/LogUpload.action"}]}}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Pages/SalesOrderHeaders_Create.page":
+/*!***********************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Pages/SalesOrderHeaders_Create.page ***!
+  \***********************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"BRL","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCurrencyCode","IsEditable":true,"IsVisible":true,"Caption":"Moeda","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"18.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateNetAmount","IsEditable":true,"IsVisible":true,"Caption":"Montante Liquido","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"108.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateTaxAmount","IsEditable":true,"IsVisible":true,"Caption":"Montante Impostos","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"126.02","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateGrossAmount","IsEditable":true,"IsVisible":true,"Caption":"Montante Bruto","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"N","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatus","IsEditable":true,"IsVisible":true,"Caption":"Status","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"New","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatusName","IsEditable":true,"IsVisible":true,"Caption":"Nome Status","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"Entrar Data","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreatedate","IsEditable":true,"IsVisible":true,"Caption":"Dt. Criação","Mode":"Datetime"}],"Visible":true}]}],"_Type":"Page","_Name":"SalesOrderHeaders_Create","Caption":"Criar Ordem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -667,6 +677,16 @@ module.exports = {"_Type":"Action.Type.ClosePage"}
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"CreateCustomerEntityFailureMessage"},"OnFailure":"/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","ValidationRule":"/MobileDemoSampleApp/Rules/CreateEmailValidation.js","Message":"Falha ao criar o registro do cliente - {#ActionResults:create/error}","Title":"Criar Cliente","OKCaption":"OK"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/CreateSalesOrderHeaderEntityFailureMessage.action":
+/*!*********************************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/CreateSalesOrderHeaderEntityFailureMessage.action ***!
+  \*********************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"CreateSalesOrderHeaderEntityFailureMessage"},"Message":"Erro ao criar Ordem de venda - {#ActionResults:create/error}","Title":"Criar Ordem de Venda","OKCaption":"OK"}
 
 /***/ }),
 
@@ -870,6 +890,16 @@ module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavT
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action":
+/*!********************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action ***!
+  \********************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavToSalesOrderHeaders_Create"},"PageToOpen":"/MobileDemoSampleApp/Pages/SalesOrderHeaders_Create.page","ModalPage":true}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action":
 /*!***************************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action ***!
@@ -887,6 +917,16 @@ module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavT
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.Message","Message":"A new version of the application is now ready to apply. Do you want to update to this version?","Title":"New Version Available!","OKCaption":"Now","CancelCaption":"Later","ActionResult":{"_Name":"OnWillUpdate"}}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action":
+/*!*********************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action ***!
+  \*********************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.CreateRelatedEntity","ActionResult":{"_Name":"SalesOrderHeaders_CreateEntity"},"OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"SalesOrderHeaders"},"ParentLink":{"Target":{"EntitySet":"Customers","ReadLink":"{@odata.readLink}"},"Property":"SalesOrders"},"Properties":{"CreatedAt":"#Page:SalesOrderHeaders_Create/#Control:FCCreatedate/#Value","CurrencyCode":"#Control:FCCreateCurrencyCode/#Value","GrossAmount":"#Control:FCCreateGrossAmount/#Value","LifeCycleStatus":"#Control:FCCreateLifeCycleStatus/#Value","LifeCycleStatusName":"#Control:FCCreateLifeCycleStatusName/#Value","NetAmount":"#Control:FCCreateNetAmount/#Value","TaxAmount":"#Control:FCCreateTaxAmount/#Value"}}
 
 /***/ }),
 
@@ -1097,6 +1137,7 @@ let mobiledemosampleapp_actions_closemodalpage_cancel_action = __webpack_require
 let mobiledemosampleapp_actions_closemodalpage_complete_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/CloseModalPage_Complete.action */ "./build.definitions/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action")
 let mobiledemosampleapp_actions_closepage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ClosePage.action */ "./build.definitions/MobileDemoSampleApp/Actions/ClosePage.action")
 let mobiledemosampleapp_actions_createcustomerentityfailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/CreateCustomerEntityFailureMessage.action")
+let mobiledemosampleapp_actions_createsalesorderheaderentityfailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/CreateSalesOrderHeaderEntityFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/CreateSalesOrderHeaderEntityFailureMessage.action")
 let mobiledemosampleapp_actions_customers_createentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_CreateEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_CreateEntity.action")
 let mobiledemosampleapp_actions_customers_deleteentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_DeleteEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_DeleteEntity.action")
 let mobiledemosampleapp_actions_customers_updateentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Customers_UpdateEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action")
@@ -1117,8 +1158,10 @@ let mobiledemosampleapp_actions_navtocustomers_detail_action = __webpack_require
 let mobiledemosampleapp_actions_navtocustomers_edit_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Edit.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action")
 let mobiledemosampleapp_actions_navtocustomers_list_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_List.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_List.action")
 let mobiledemosampleapp_actions_navtocustomers_orders_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Orders.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action")
+let mobiledemosampleapp_actions_navtosalesorderheaders_create_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action")
 let mobiledemosampleapp_actions_navtosalesorders_details_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action")
 let mobiledemosampleapp_actions_onwillupdate_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/OnWillUpdate.action */ "./build.definitions/MobileDemoSampleApp/Actions/OnWillUpdate.action")
+let mobiledemosampleapp_actions_salesorderheaders_createentity_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action */ "./build.definitions/MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action")
 let mobiledemosampleapp_actions_service_closeoffline_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Service/CloseOffline.action */ "./build.definitions/MobileDemoSampleApp/Actions/Service/CloseOffline.action")
 let mobiledemosampleapp_actions_service_closeofflinefailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Service/CloseOfflineFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/Service/CloseOfflineFailureMessage.action")
 let mobiledemosampleapp_actions_service_closeofflinesuccessmessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Service/CloseOfflineSuccessMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/Service/CloseOfflineSuccessMessage.action")
@@ -1144,6 +1187,7 @@ let mobiledemosampleapp_pages_customers_orders_page = __webpack_require__(/*! ./
 let mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_Detail.page */ "./build.definitions/MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_Detail.page")
 let mobiledemosampleapp_pages_errorarchive_errorarchive_list_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_List.page */ "./build.definitions/MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_List.page")
 let mobiledemosampleapp_pages_main_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Main.page */ "./build.definitions/MobileDemoSampleApp/Pages/Main.page")
+let mobiledemosampleapp_pages_salesorderheaders_create_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/SalesOrderHeaders_Create.page */ "./build.definitions/MobileDemoSampleApp/Pages/SalesOrderHeaders_Create.page")
 let mobiledemosampleapp_pages_salesorders_details_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/SalesOrders_Details.page */ "./build.definitions/MobileDemoSampleApp/Pages/SalesOrders_Details.page")
 let mobiledemosampleapp_rules_appupdatefailure_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateFailure.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateFailure.js")
 let mobiledemosampleapp_rules_appupdatesuccess_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateSuccess.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateSuccess.js")
@@ -1172,6 +1216,7 @@ module.exports = {
 	mobiledemosampleapp_actions_closemodalpage_complete_action : mobiledemosampleapp_actions_closemodalpage_complete_action,
 	mobiledemosampleapp_actions_closepage_action : mobiledemosampleapp_actions_closepage_action,
 	mobiledemosampleapp_actions_createcustomerentityfailuremessage_action : mobiledemosampleapp_actions_createcustomerentityfailuremessage_action,
+	mobiledemosampleapp_actions_createsalesorderheaderentityfailuremessage_action : mobiledemosampleapp_actions_createsalesorderheaderentityfailuremessage_action,
 	mobiledemosampleapp_actions_customers_createentity_action : mobiledemosampleapp_actions_customers_createentity_action,
 	mobiledemosampleapp_actions_customers_deleteentity_action : mobiledemosampleapp_actions_customers_deleteentity_action,
 	mobiledemosampleapp_actions_customers_updateentity_action : mobiledemosampleapp_actions_customers_updateentity_action,
@@ -1192,8 +1237,10 @@ module.exports = {
 	mobiledemosampleapp_actions_navtocustomers_edit_action : mobiledemosampleapp_actions_navtocustomers_edit_action,
 	mobiledemosampleapp_actions_navtocustomers_list_action : mobiledemosampleapp_actions_navtocustomers_list_action,
 	mobiledemosampleapp_actions_navtocustomers_orders_action : mobiledemosampleapp_actions_navtocustomers_orders_action,
+	mobiledemosampleapp_actions_navtosalesorderheaders_create_action : mobiledemosampleapp_actions_navtosalesorderheaders_create_action,
 	mobiledemosampleapp_actions_navtosalesorders_details_action : mobiledemosampleapp_actions_navtosalesorders_details_action,
 	mobiledemosampleapp_actions_onwillupdate_action : mobiledemosampleapp_actions_onwillupdate_action,
+	mobiledemosampleapp_actions_salesorderheaders_createentity_action : mobiledemosampleapp_actions_salesorderheaders_createentity_action,
 	mobiledemosampleapp_actions_service_closeoffline_action : mobiledemosampleapp_actions_service_closeoffline_action,
 	mobiledemosampleapp_actions_service_closeofflinefailuremessage_action : mobiledemosampleapp_actions_service_closeofflinefailuremessage_action,
 	mobiledemosampleapp_actions_service_closeofflinesuccessmessage_action : mobiledemosampleapp_actions_service_closeofflinesuccessmessage_action,
@@ -1219,6 +1266,7 @@ module.exports = {
 	mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page : mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page,
 	mobiledemosampleapp_pages_errorarchive_errorarchive_list_page : mobiledemosampleapp_pages_errorarchive_errorarchive_list_page,
 	mobiledemosampleapp_pages_main_page : mobiledemosampleapp_pages_main_page,
+	mobiledemosampleapp_pages_salesorderheaders_create_page : mobiledemosampleapp_pages_salesorderheaders_create_page,
 	mobiledemosampleapp_pages_salesorders_details_page : mobiledemosampleapp_pages_salesorders_details_page,
 	mobiledemosampleapp_rules_appupdatefailure_js : mobiledemosampleapp_rules_appupdatefailure_js,
 	mobiledemosampleapp_rules_appupdatesuccess_js : mobiledemosampleapp_rules_appupdatesuccess_js,
