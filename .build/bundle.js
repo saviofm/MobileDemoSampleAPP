@@ -180,6 +180,28 @@ function DeleteConfirmation(context) {
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Rules/Customers_OrderCount.js":
+/*!*****************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Rules/Customers_OrderCount.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CustomerOrderCount)
+/* harmony export */ });
+function CustomerOrderCount(context) {
+  //The following currentCustomer will retrieve the current customer record
+  const currentCustomer = context.getPageProxy().binding.CustomerId;
+  //The following expression will retrieve the total count of the orders for a given customer
+  return context.count('/MobileDemoSampleApp/Services/SampleServiceV2.service', 'SalesOrderHeaders', `$filter=CustomerId eq '${currentCustomer}'`).then(count => {
+    return count;
+  });
+}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js":
 /*!************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js ***!
@@ -484,7 +506,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePhoneNumber","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateEmailAddress","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true},{"Value":"2000-01-01T00:00:01","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreateDOB","IsEditable":true,"IsVisible":true,"Caption":"Dt. Nasc.","Mode":"Datetime"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"Digitar Valor","KeyboardType":"Number","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCreateCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AG"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Create","Caption":"Criar Cliente","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_CreateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePhoneNumber","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateEmailAddress","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true},{"Value":"2000-01-01T00:00:01","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreateDOB","IsEditable":true,"IsVisible":true,"Caption":"Dt. Nasc.","Mode":"Datetime"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"Digitar Valor","KeyboardType":"Number","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"Digitar Valor","KeyboardType":"Default","Enabled":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCreateCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AG"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Create","Caption":"Criar Cliente","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_CreateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -494,7 +516,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"Endereço","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"Cidade","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"CEP","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"País","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"Detalhes","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"Endereço","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"Cidade","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"CEP","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"País","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"{@odata.readLink}/SalesOrders","QueryOptions":"$top=5&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Header":{"_Name":"SectionHeader0","UseTopPadding":true,"Caption":"Ordens"},"Footer":{"_Name":"SectionFooter0","Caption":"Ver todas ordens","AttributeLabel":"/MobileDemoSampleApp/Rules/Customers_OrderCount.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action","UseBottomPadding":false},"Visible":true,"EmptySection":{"Caption":"Nenhuma ordem de cliente encontrada","FooterVisible":false},"ObjectCell":{"Title":"{SalesOrderId}","Subhead":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{CurrencyCode}","PreserveIconStackSpacing":false,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false,"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true}},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"Detalhes","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -505,6 +527,16 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
 /***/ ((module) => {
 
 module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"{FirstName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{LastName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{PhoneNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPhone","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true},{"Value":"{EmailAddress}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCEmail","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true},{"Value":"{DateOfBirth}","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCDOB","IsEditable":true,"IsVisible":true,"Caption":"Dt. Nasc.","Mode":"Date"},{"Value":"{Street}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{HouseNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{City}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{PostalCode}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":["{Country}"],"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"Search":{"Placeholder":"Selecionar"},"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AR"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Edit","Caption":"Alterar Clientes","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action"}],"_Name":"ActionBar1"}}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Orders.page":
+/*!***************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Pages/Customers_Orders.page ***!
+  \***************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"SalesOrderHeaders","QueryOptions":"$filter=CustomerId eq '{CustomerId}'&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem encontrada","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"{CustomerId}","Description":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{LifeCycleStatusName}","PreserveIconStackSpacing":true,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"Search":{"Enabled":true,"BarcodeScanner":true},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Orders","Caption":"Customers_Orders","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -535,6 +567,16 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
 /***/ ((module) => {
 
 module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton0","Title":"Clientes","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://customer","ImagePosition":"Leading","FullWidth":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_List.action"}]}]}],"_Type":"Page","_Name":"Main","Caption":"Main","PrefersLargeCaption":true,"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"LogoutToolbarItem","Caption":"Logout","Enabled":true,"Visible":true,"Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/LogoutMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UploadToolbarItem","Caption":"Sync","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/Service/SyncStartedMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UpdateToolbarItem","Caption":"Update","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/AppUpdateProgressBanner.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"Upload Logs","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/LogUpload.action"}]}}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Pages/SalesOrders_Details.page":
+/*!******************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Pages/SalesOrders_Details.page ***!
+  \******************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"KeyAndValues":[{"Value":"{SalesOrderId}","_Name":"KeyValue0","KeyName":"Número Ordem","Visible":true},{"Value":"{LifeCycleStatusName}","_Name":"KeyValue1","KeyName":"Status","Visible":true},{"Value":"$(D,{CreatedAt},'','',{format:'medium'})","_Name":"KeyValue2","KeyName":"Criado em","Visible":true},{"Value":"$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue3","KeyName":"Montante liquido","Visible":true},{"Value":"$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue4","KeyName":"Montante Imposto","Visible":true},{"Value":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue5","KeyName":"Montante Total","Visible":true}],"MaxItemCount":1,"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"SalesOrders_Details","Caption":"Detalhes da Ordem","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -818,6 +860,26 @@ module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavT
 
 /***/ }),
 
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action":
+/*!************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action ***!
+  \************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavToCustomers_Orders"},"PageToOpen":"/MobileDemoSampleApp/Pages/Customers_Orders.page"}
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action":
+/*!***************************************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action ***!
+  \***************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.Navigation","ActionResult":{"_Name":"NavToSalesOrders_Details"},"PageToOpen":"/MobileDemoSampleApp/Pages/SalesOrders_Details.page"}
+
+/***/ }),
+
 /***/ "./build.definitions/MobileDemoSampleApp/Actions/OnWillUpdate.action":
 /*!***************************************************************************!*\
   !*** ./build.definitions/MobileDemoSampleApp/Actions/OnWillUpdate.action ***!
@@ -1054,6 +1116,8 @@ let mobiledemosampleapp_actions_navtocustomers_create_action = __webpack_require
 let mobiledemosampleapp_actions_navtocustomers_detail_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Detail.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Detail.action")
 let mobiledemosampleapp_actions_navtocustomers_edit_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Edit.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action")
 let mobiledemosampleapp_actions_navtocustomers_list_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_List.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_List.action")
+let mobiledemosampleapp_actions_navtocustomers_orders_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToCustomers_Orders.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action")
+let mobiledemosampleapp_actions_navtosalesorders_details_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action */ "./build.definitions/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action")
 let mobiledemosampleapp_actions_onwillupdate_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/OnWillUpdate.action */ "./build.definitions/MobileDemoSampleApp/Actions/OnWillUpdate.action")
 let mobiledemosampleapp_actions_service_closeoffline_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Service/CloseOffline.action */ "./build.definitions/MobileDemoSampleApp/Actions/Service/CloseOffline.action")
 let mobiledemosampleapp_actions_service_closeofflinefailuremessage_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/Service/CloseOfflineFailureMessage.action */ "./build.definitions/MobileDemoSampleApp/Actions/Service/CloseOfflineFailureMessage.action")
@@ -1076,13 +1140,16 @@ let mobiledemosampleapp_pages_customer_list_page = __webpack_require__(/*! ./Mob
 let mobiledemosampleapp_pages_customers_create_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Create.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Create.page")
 let mobiledemosampleapp_pages_customers_detail_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Detail.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Detail.page")
 let mobiledemosampleapp_pages_customers_edit_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Edit.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Edit.page")
+let mobiledemosampleapp_pages_customers_orders_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Orders.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Orders.page")
 let mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_Detail.page */ "./build.definitions/MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_Detail.page")
 let mobiledemosampleapp_pages_errorarchive_errorarchive_list_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_List.page */ "./build.definitions/MobileDemoSampleApp/Pages/ErrorArchive/ErrorArchive_List.page")
 let mobiledemosampleapp_pages_main_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Main.page */ "./build.definitions/MobileDemoSampleApp/Pages/Main.page")
+let mobiledemosampleapp_pages_salesorders_details_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/SalesOrders_Details.page */ "./build.definitions/MobileDemoSampleApp/Pages/SalesOrders_Details.page")
 let mobiledemosampleapp_rules_appupdatefailure_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateFailure.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateFailure.js")
 let mobiledemosampleapp_rules_appupdatesuccess_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/AppUpdateSuccess.js */ "./build.definitions/MobileDemoSampleApp/Rules/AppUpdateSuccess.js")
 let mobiledemosampleapp_rules_createemailvalidation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/CreateEmailValidation.js */ "./build.definitions/MobileDemoSampleApp/Rules/CreateEmailValidation.js")
 let mobiledemosampleapp_rules_customers_deleteconfirmation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js */ "./build.definitions/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js")
+let mobiledemosampleapp_rules_customers_ordercount_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/Customers_OrderCount.js */ "./build.definitions/MobileDemoSampleApp/Rules/Customers_OrderCount.js")
 let mobiledemosampleapp_rules_emailvalidation_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/EmailValidation.js */ "./build.definitions/MobileDemoSampleApp/Rules/EmailValidation.js")
 let mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js */ "./build.definitions/MobileDemoSampleApp/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js")
 let mobiledemosampleapp_rules_onwillupdate_js = __webpack_require__(/*! ./MobileDemoSampleApp/Rules/OnWillUpdate.js */ "./build.definitions/MobileDemoSampleApp/Rules/OnWillUpdate.js")
@@ -1124,6 +1191,8 @@ module.exports = {
 	mobiledemosampleapp_actions_navtocustomers_detail_action : mobiledemosampleapp_actions_navtocustomers_detail_action,
 	mobiledemosampleapp_actions_navtocustomers_edit_action : mobiledemosampleapp_actions_navtocustomers_edit_action,
 	mobiledemosampleapp_actions_navtocustomers_list_action : mobiledemosampleapp_actions_navtocustomers_list_action,
+	mobiledemosampleapp_actions_navtocustomers_orders_action : mobiledemosampleapp_actions_navtocustomers_orders_action,
+	mobiledemosampleapp_actions_navtosalesorders_details_action : mobiledemosampleapp_actions_navtosalesorders_details_action,
 	mobiledemosampleapp_actions_onwillupdate_action : mobiledemosampleapp_actions_onwillupdate_action,
 	mobiledemosampleapp_actions_service_closeoffline_action : mobiledemosampleapp_actions_service_closeoffline_action,
 	mobiledemosampleapp_actions_service_closeofflinefailuremessage_action : mobiledemosampleapp_actions_service_closeofflinefailuremessage_action,
@@ -1146,13 +1215,16 @@ module.exports = {
 	mobiledemosampleapp_pages_customers_create_page : mobiledemosampleapp_pages_customers_create_page,
 	mobiledemosampleapp_pages_customers_detail_page : mobiledemosampleapp_pages_customers_detail_page,
 	mobiledemosampleapp_pages_customers_edit_page : mobiledemosampleapp_pages_customers_edit_page,
+	mobiledemosampleapp_pages_customers_orders_page : mobiledemosampleapp_pages_customers_orders_page,
 	mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page : mobiledemosampleapp_pages_errorarchive_errorarchive_detail_page,
 	mobiledemosampleapp_pages_errorarchive_errorarchive_list_page : mobiledemosampleapp_pages_errorarchive_errorarchive_list_page,
 	mobiledemosampleapp_pages_main_page : mobiledemosampleapp_pages_main_page,
+	mobiledemosampleapp_pages_salesorders_details_page : mobiledemosampleapp_pages_salesorders_details_page,
 	mobiledemosampleapp_rules_appupdatefailure_js : mobiledemosampleapp_rules_appupdatefailure_js,
 	mobiledemosampleapp_rules_appupdatesuccess_js : mobiledemosampleapp_rules_appupdatesuccess_js,
 	mobiledemosampleapp_rules_createemailvalidation_js : mobiledemosampleapp_rules_createemailvalidation_js,
 	mobiledemosampleapp_rules_customers_deleteconfirmation_js : mobiledemosampleapp_rules_customers_deleteconfirmation_js,
+	mobiledemosampleapp_rules_customers_ordercount_js : mobiledemosampleapp_rules_customers_ordercount_js,
 	mobiledemosampleapp_rules_emailvalidation_js : mobiledemosampleapp_rules_emailvalidation_js,
 	mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js : mobiledemosampleapp_rules_errorarchive_errorarchive_checkforsyncerror_js,
 	mobiledemosampleapp_rules_onwillupdate_js : mobiledemosampleapp_rules_onwillupdate_js,

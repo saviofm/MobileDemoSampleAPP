@@ -1,0 +1,110 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "BRL",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCreateCurrencyCode",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Moeda",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "18.010",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCreateNetAmount",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Montante Liquido",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "108.010",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCreateTaxAmount",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Montante Impostos",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "126.02",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCreateGrossAmount",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Montante Bruto",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "N",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCreateLifeCycleStatus",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Status",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "New",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCreateLifeCycleStatusName",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Nome Status",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true
+						},
+						{
+							"Value": "Entrar Data",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "FCCreatedate",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Dt. Criação",
+							"Mode": "Datetime"
+						}
+					],
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SalesOrderHeaders_Create",
+	"Caption": "Criar Ordem",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Item",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

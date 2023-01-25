@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "CreateSalesOrderHeaderEntityFailureMessage"
+	},
+	"Message": "Erro ao criar Ordem de venda - {#ActionResults:create/error}",
+	"Title": "Criar Ordem de Venda",
+	"OKCaption": "OK"
+}

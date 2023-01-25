@@ -59,13 +59,6 @@
 					}
 				},
 				{
-					"_Type": "Section.Type.ObjectTable",
-					"Target": {
-						"Service": "/MobileDemoSampleApp/Services/SampleServiceV2.service",
-						"EntitySet": "{@odata.readLink}/SalesOrders",
-						"QueryOptions": "$top=5&$orderby=CreatedAt desc"
-					},
-					"_Name": "SectionObjectTable0",
 					"Header": {
 						"_Name": "SectionHeader0",
 						"UseTopPadding": true,
@@ -81,12 +74,26 @@
 						"OnPress": "/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action",
 						"UseBottomPadding": false
 					},
+					"_Type": "Section.Type.ObjectTable",
+					"DataSubscriptions": [
+						"SalesOrderHeaders"
+					],
+					"Target": {
+						"Service": "/MobileDemoSampleApp/Services/SampleServiceV2.service",
+						"EntitySet": "{@odata.readLink}/SalesOrders",
+						"QueryOptions": "$top=5&$orderby=CreatedAt desc"
+					},
+					"_Name": "SectionObjectTable0",
 					"Visible": true,
 					"EmptySection": {
 						"Caption": "Nenhuma ordem de cliente encontrada",
 						"FooterVisible": false
 					},
 					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true
+						},
 						"Title": "{SalesOrderId}",
 						"Subhead": "$(D,{CreatedAt},'','',{format:'medium'})",
 						"DisplayDescriptionInMobile": true,
@@ -105,11 +112,7 @@
 							"ImageIsCircular": true
 						},
 						"OnPress": "/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action",
-						"Selected": false,
-						"ContextMenu": {
-							"Items": [],
-							"PerformFirstActionWithFullSwipe": true
-						}
+						"Selected": false
 					},
 					"DataPaging": {
 						"ShowLoadingIndicator": false,
@@ -151,5 +154,19 @@
 			}
 		],
 		"_Name": "ActionBar1"
+	},
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem0",
+				"Caption": "Criar Ordem",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action"
+			}
+		]
 	}
 }
