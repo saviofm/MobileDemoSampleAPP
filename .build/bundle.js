@@ -644,7 +644,7 @@ module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult"
   \*************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ODataService.DeleteEntity","ActionResult":{"_Name":"delete"},"OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"}}
+module.exports = {"_Type":"Action.Type.ODataService.DeleteEntity","ActionResult":{"_Name":"delete"},"OnFailure":"/MobileDemoSampleApp/Actions/DeleteCustomerEntityFailureMessage.action","OnSuccess":"/MobileDemoSampleApp/Actions/CloseModalPage_Complete.action","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","ReadLink":"{@odata.readLink}"}}
 
 /***/ }),
 
@@ -724,7 +724,7 @@ module.exports = {"_Type":"Action.Type.Logger.SetLevel","ActionResult":{"_Name":
   \**************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.Logger.SetState","ActionResult":{"_Name":"LogSetState"},"OnSuccess":"/MobileDemoSampleApp/Actions/LogSetState.action","LoggerState":"On"}
+module.exports = {"_Type":"Action.Type.Logger.SetState","OnSuccess":"/MobileDemoSampleApp/Actions/LogSetLevel.action","LoggerState":"On"}
 
 /***/ }),
 
@@ -734,7 +734,7 @@ module.exports = {"_Type":"Action.Type.Logger.SetState","ActionResult":{"_Name":
   \************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.Logger.Upload","ActionResult":{"_Name":"LogUpload"}}
+module.exports = {"_Type":"Action.Type.Logger.Upload","ActionResult":{"_Name":"LogUpload"},"OnFailure":"/MobileDemoSampleApp/Actions/LogUploadFailure.action","OnSuccess":"/MobileDemoSampleApp/Actions/LogUploadSuccessful.action"}
 
 /***/ }),
 

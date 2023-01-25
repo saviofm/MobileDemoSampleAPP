@@ -1,5 +1,5 @@
 {
 	"_Type": "Action.Type.Logger.SetState",
-	"OnSuccess": "/MobileDemoSampleApp/Actions/LogSetState.action",
+	"OnSuccess": "/MobileDemoSampleApp/Actions/LogSetLevel.action",
 	"LoggerState": "On"
 }
