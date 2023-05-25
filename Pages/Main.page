@@ -5,6 +5,20 @@
 			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable1",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "Botao novo",
+						"FooterVisible": false
+					},
+					"Buttons": [],
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					}
+				},
+				{
 					"Layout": {
 						"LayoutType": "Vertical",
 						"HorizontalAlignment": "Leading"
@@ -76,6 +90,15 @@
 				"Clickable": true,
 				"Style": "",
 				"OnPress": "/MobileDemoSampleApp/Actions/LogUpload.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem1",
+				"Caption": "ToolbarItem",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": ""
 			}
 		]
 	}
