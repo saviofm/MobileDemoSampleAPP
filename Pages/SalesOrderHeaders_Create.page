@@ -1,7 +1,11 @@
 {
 	"Controls": [
 		{
-			"_Type": "Control.Type.FormCellContainer",
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
 			"_Name": "FormCellContainer0",
 			"Sections": [
 				{
@@ -10,80 +14,100 @@
 							"Value": "BRL",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCreateCurrencyCode",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Moeda",
+							"Separator": true,
+							"Caption": "$(L,'currency')",
 							"PlaceHolder": "PlaceHolder",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "18.010",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCreateNetAmount",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Montante Liquido",
+							"Separator": true,
+							"Caption": "$(L,'net_amount')",
 							"PlaceHolder": "PlaceHolder",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "108.010",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCreateTaxAmount",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Montante Impostos",
+							"Separator": true,
+							"Caption": "$(L,'tax_amount')",
 							"PlaceHolder": "PlaceHolder",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "126.02",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCreateGrossAmount",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Montante Bruto",
+							"Separator": true,
+							"Caption": "$(L,'gross_amount')",
 							"PlaceHolder": "PlaceHolder",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "N",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCreateLifeCycleStatus",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"Caption": "Status",
 							"PlaceHolder": "PlaceHolder",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "New",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCreateLifeCycleStatusName",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Nome Status",
+							"Separator": true,
+							"Caption": "$(L,'name_status')",
 							"PlaceHolder": "PlaceHolder",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
-							"Value": "Entrar Data",
+							"Value": "$(L,'enter_date')",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "FCCreatedate",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Dt. Criação",
+							"Separator": true,
+							"Caption": "$(L,'creation_date')",
+							"IsEditable": true,
 							"Mode": "Datetime"
 						}
 					],
-					"Visible": true
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell0"
 				}
 			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "SalesOrderHeaders_Create",
-	"Caption": "Criar Ordem",
+	"Caption": "$(L,'order_create')",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{

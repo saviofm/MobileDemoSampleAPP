@@ -7,7 +7,7 @@
 		var a = factory();
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function() {
+})(this, () => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -17,7 +17,17 @@ return /******/ (() => { // webpackBootstrap
   \********************************************************************/
 /***/ ((module) => {
 
-module.exports = ""
+module.exports = "main_title=Main\ncustomer_title=Customers\nsalesOrderHeaders_title=Sales Order Headers\nlogout_button=Logout\nsync_button=Sync\nupdate_button=Update\n\ncreate_customer=Create Customer\ncustomer_detail=Customer Detail\ncustomer_edit=Edit Customer\ncustomer_orders=Customer's Orders\norder_create=Create Order\nsalesOrderItems_title=Order Details\nname=Name\nlast_name=Last Name\nphone=Phone\nemail=E-mail\nbirthdate=Birth Date\nstreet=Street\nhouse_number=House Num\ncity=City\npostal_code=Postal Code\ncountry=Country\naddress=Address\ncurrency=Currency\nnet_amount=Net Amount\ntax_amount=Tax Amount\ngross_amount=Gross Amount\nname_status=Name Status\ncreation_date=Creation Date\nenter_date=Enter Date\nsalesOrder_number=Order Number\ncreated_at=Created At"
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/i18n/i18n_pt.properties":
+/*!***********************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/i18n/i18n_pt.properties ***!
+  \***********************************************************************/
+/***/ ((module) => {
+
+module.exports = "main_title=Main\ncustomer_title=Customers\nsalesOrderHeaders_title=Ordens\nlogout_button=Logout\nsync_button=Sync\nupdate_button=Update\n\ncreate_customer=Criar Cliente\ncustomer_detail=Detalhes Cliente\ncustomer_edit=Editar Cliente\ncustomer_orders=Ordens do Cliente\norder_create=Criar Ordem\nsalesOrderItems_title=Detalhes Ordem\nname=Nome\nlast_name=Sobrenome\nphone=Tel.\nemail=E-mail\nbirthdate=Nascimento\nstreet=Endereço\nhouse_number=Número\ncity=Cidade\npostal_code=CEP\ncountry=País\naddress=Endereço\ncurrency=Moeda\nnet_amount=Montante Liquido\ntax_amount=Montante Impostos\ngross_amount=Montante Bruto\nname_status=Nome Status\ncreation_date=Data Criação\nenter_date=Entrada Data\nsalesOrder_number=Número Ordem\ncreated_at=Criado em"
 
 /***/ }),
 
@@ -325,11 +335,32 @@ function ResetAppSettingsAndLogout(context) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\ndiv.MDKPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\n", "",{"version":3,"sources":["webpack://./build.definitions/MobileDemoSampleApp/Styles/Styles.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\ndiv.MDKPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.
+
+Examples:
+
+@mdkYellow1: #ffbb33;
+@mdkRed1: #ff0000;
+
+//// By-Type style: All Pages in the application will now have a yellow background
+div.MDKPage
+
+{ background-color: @mdkYellow1; }
+//// By-Name style: All Buttons with _Name == "BlueButton" will now have this style
+#BlueButton
+
+{ color: @mdkYellow1; background-color: #0000FF; }
+//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function
+
+.MyButton
+
+{ color: @mdkYellow1; background-color: @mdkRed1; }
+*/
+`, "",{"version":3,"sources":["webpack://./build.definitions/MobileDemoSampleApp/Styles/Styles.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\ndiv.MDKPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\n"],"sourceRoot":""}]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -343,11 +374,31 @@ module.exports = ___CSS_LOADER_EXPORT___;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/", "",{"version":3,"sources":["webpack://./build.definitions/MobileDemoSampleApp/Styles/Styles.less"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.
+
+Examples:
+
+@mdkYellow1: #ffbb33;
+@mdkRed1: #ff0000;
+
+//// By-Type style: All Pages in the application will now have a yellow background
+Page
+
+{ background-color: @mdkYellow1; }
+//// By-Name style: All Buttons with _Name == "BlueButton" will now have this style
+#BlueButton
+
+{ color: @mdkYellow1; background-color: #0000FF; }
+//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function
+
+.MyButton
+
+{ color: @mdkYellow1; background-color: @mdkRed1; }
+*/`, "",{"version":3,"sources":["webpack://./build.definitions/MobileDemoSampleApp/Styles/Styles.less"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/"],"sourceRoot":""}]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -361,21 +412,21 @@ module.exports = ___CSS_LOADER_EXPORT___;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
 
-/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js":
-/*!*******************************************************************************************************************************!*\
-  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js ***!
-  \*******************************************************************************************************************************/
+/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js":
+/*!************************************************************************************************************************!*\
+  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/api.js ***!
+  \************************************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -385,106 +436,109 @@ module.exports = ___CSS_LOADER_EXPORT___;
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
 */
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
 module.exports = function (cssWithMappingToString) {
-  var list = []; // return the list of modules as css string
+  var list = [];
 
+  // return the list of modules as css string
   list.toString = function toString() {
     return this.map(function (item) {
-      var content = cssWithMappingToString(item);
-
-      if (item[2]) {
-        return "@media ".concat(item[2], " {").concat(content, "}");
+      var content = "";
+      var needLayer = typeof item[5] !== "undefined";
+      if (item[4]) {
+        content += "@supports (".concat(item[4], ") {");
       }
-
+      if (item[2]) {
+        content += "@media ".concat(item[2], " {");
+      }
+      if (needLayer) {
+        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
+      }
+      content += cssWithMappingToString(item);
+      if (needLayer) {
+        content += "}";
+      }
+      if (item[2]) {
+        content += "}";
+      }
+      if (item[4]) {
+        content += "}";
+      }
       return content;
     }).join("");
-  }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
+  };
 
-
-  list.i = function (modules, mediaQuery, dedupe) {
+  // import a list of modules into the list
+  list.i = function i(modules, media, dedupe, supports, layer) {
     if (typeof modules === "string") {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, ""]];
+      modules = [[null, modules, undefined]];
     }
-
     var alreadyImportedModules = {};
-
     if (dedupe) {
-      for (var i = 0; i < this.length; i++) {
-        // eslint-disable-next-line prefer-destructuring
-        var id = this[i][0];
-
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
         if (id != null) {
           alreadyImportedModules[id] = true;
         }
       }
     }
-
-    for (var _i = 0; _i < modules.length; _i++) {
-      var item = [].concat(modules[_i]);
-
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
       if (dedupe && alreadyImportedModules[item[0]]) {
-        // eslint-disable-next-line no-continue
         continue;
       }
-
-      if (mediaQuery) {
-        if (!item[2]) {
-          item[2] = mediaQuery;
+      if (typeof layer !== "undefined") {
+        if (typeof item[5] === "undefined") {
+          item[5] = layer;
         } else {
-          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
+          item[5] = layer;
         }
       }
-
+      if (media) {
+        if (!item[2]) {
+          item[2] = media;
+        } else {
+          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
+          item[2] = media;
+        }
+      }
+      if (supports) {
+        if (!item[4]) {
+          item[4] = "".concat(supports);
+        } else {
+          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
+          item[4] = supports;
+        }
+      }
       list.push(item);
     }
   };
-
   return list;
 };
 
 /***/ }),
 
-/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
-/*!**************************************************************************************************************************************************!*\
-  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
-  \**************************************************************************************************************************************************/
+/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js":
+/*!*******************************************************************************************************************************!*\
+  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-23.10.1/node_modules/css-loader/dist/runtime/sourceMaps.js ***!
+  \*******************************************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
 
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-module.exports = function cssWithMappingToString(item) {
-  var _item = _slicedToArray(item, 4),
-      content = _item[1],
-      cssMapping = _item[3];
-
+module.exports = function (item) {
+  var content = item[1];
+  var cssMapping = item[3];
+  if (!cssMapping) {
+    return content;
+  }
   if (typeof btoa === "function") {
-    // eslint-disable-next-line no-undef
     var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
     var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
     var sourceMapping = "/*# ".concat(data, " */");
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot || "").concat(source, " */");
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join("\n");
+    return [content].concat([sourceMapping]).join("\n");
   }
-
   return [content].join("\n");
 };
 
@@ -496,7 +550,7 @@ module.exports = function cssWithMappingToString(item) {
   \************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ContactCell","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","QueryOptions":"$orderby=LastName"},"_Name":"SectionContactCell0","Visible":true,"EmptySection":{"FooterVisible":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"ContactCell":{"ContextMenu":{"PerformFirstActionWithFullSwipe":true,"Items":[]},"DetailImage":"","Headline":"{FirstName}","Subheadline":"{LastName}","Description":"{City}","OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Detail.action","ActivityItems":[{"_Name":"SectionContactCell0ActivityItems0","ActivityType":"Phone","ActivityValue":"{PhoneNumber}"},{"_Name":"SectionContactCell0ActivityItems1","ActivityType":"Email","ActivityValue":"{EmailAddress}"}]},"Search":{"Enabled":true,"BarcodeScanner":true}}]}],"_Type":"Page","_Name":"Customer_List","Caption":"Customer","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Add","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Create.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ContactCell","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"Customers","QueryOptions":"$orderby=LastName"},"_Name":"SectionContactCell0","Visible":true,"EmptySection":{"FooterVisible":false},"ContactCell":{"Visible":true,"ContextMenu":{"PerformFirstActionWithFullSwipe":true,"Items":[]},"DetailImage":"","Headline":"{FirstName}","Subheadline":"{LastName}","Description":"{City}","OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Detail.action","ActivityItems":[{"_Name":"SectionContactCell0ActivityItems0","ActivityType":"Phone","ActivityValue":"{PhoneNumber}"},{"_Name":"SectionContactCell0ActivityItems1","ActivityType":"Email","ActivityValue":"{EmailAddress}"}]},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"Search":{"Enabled":true,"BarcodeScanner":true}}],"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"Customer_List","Caption":"$(L,'customer_title')","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Add","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Create.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -506,7 +560,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePhoneNumber","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateEmailAddress","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true},{"Value":"2000-01-01T00:00:01","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreateDOB","IsEditable":true,"IsVisible":true,"Caption":"Dt. Nasc.","Mode":"Datetime"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"Digitar Valor","KeyboardType":"Number","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"Digitar Valor","Enabled":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"Digitar Valor","KeyboardType":"Default","Enabled":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCreateCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AG"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Create","Caption":"Criar Cliente","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_CreateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"FormCellContainer0","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateFirstName","IsVisible":true,"Separator":true,"Caption":"$(L,'name')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLastName","IsVisible":true,"Separator":true,"Caption":"$(L,'last_name')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePhoneNumber","IsVisible":true,"Separator":true,"Caption":"$(L,'phone')","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateEmailAddress","IsVisible":true,"Separator":true,"Caption":"$(L,'email')","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true,"IsEditable":true},{"Value":"2000-01-01T00:00:01","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreateDOB","IsVisible":true,"Separator":true,"Caption":"$(L,'birthdate')","IsEditable":true,"Mode":"Datetime"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateStreet","IsVisible":true,"Separator":true,"Caption":"$(L,'street')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateHouseNumber","IsVisible":true,"Separator":true,"Caption":"$(L,'house_number')","PlaceHolder":"Digitar Valor","KeyboardType":"Number","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCity","IsVisible":true,"Separator":true,"Caption":"$(L,'city')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreatePostalCode","IsVisible":true,"Separator":true,"Caption":"$(L,'postal_code')","PlaceHolder":"Digitar Valor","KeyboardType":"Default","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCreateCountry","IsVisible":true,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"$(L,'country')","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AG"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"FormCellContainer0SectionFormCell0"}]}],"_Type":"Page","_Name":"Customers_Create","Caption":"$(L,'create_customer')","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_CreateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -516,7 +570,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"Endereço","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"Cidade","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"CEP","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"País","Visible":true}],"MaxItemCount":1,"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","UseTopPadding":true,"Caption":"Ordens"},"Footer":{"_Name":"SectionFooter0","Caption":"Ver todas ordens","AttributeLabel":"/MobileDemoSampleApp/Rules/Customers_OrderCount.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action","UseBottomPadding":false},"_Type":"Section.Type.ObjectTable","DataSubscriptions":["SalesOrderHeaders"],"Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"{@odata.readLink}/SalesOrders","QueryOptions":"$top=5&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem de cliente encontrada","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{CurrencyCode}","PreserveIconStackSpacing":false,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"Detalhes","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"}],"_Name":"ActionBar1"},"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"Criar Ordem","Enabled":true,"Visible":true,"Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action"}]}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"{LastName}","Footnote":"{EmailAddress}","Description":"{CustomerId}","StatusText":"{PhoneNumber}","BodyText":"{DateOfBirth}","HeadlineText":"{FirstName}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"KeyAndValues":[{"Value":"{Street}, {HouseNumber}","_Name":"KeyValue2","KeyName":"$(L,'address')","Visible":true},{"Value":"{City}","_Name":"KeyValue3","KeyName":"$(L,'city')","Visible":true},{"Value":"{PostalCode}","_Name":"KeyValue1","KeyName":"$(L,'postal_code')","Visible":true},{"Value":"{Country}","_Name":"KeyValue0","KeyName":"$(L,'country')","Visible":true}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}},{"Header":{"_Name":"SectionHeader0","AccessoryType":"none","UseTopPadding":true,"Caption":"$(L,'salesOrderHeaders_title')"},"Footer":{"_Name":"SectionFooter0","Caption":"Ver todas ordens","AttributeLabel":"/MobileDemoSampleApp/Rules/Customers_OrderCount.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action","UseBottomPadding":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ObjectTable","DataSubscriptions":["SalesOrderHeaders"],"Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"{@odata.readLink}/SalesOrders","QueryOptions":"$top=5&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem de cliente encontrada","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{CurrencyCode}","PreserveIconStackSpacing":false,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Detail","Caption":"$(L,'customer_detail')","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Edit","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_Edit.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Trash","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Rules/Customers_DeleteConfirmation.js"}],"_Name":"ActionBar1"},"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"$(L,'order_create')","Enabled":true,"Visible":true,"Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrderHeaders_Create.action"}]}}
 
 /***/ }),
 
@@ -526,7 +580,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \*************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"{FirstName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCFirstName","IsEditable":true,"IsVisible":true,"Caption":"Nome","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{LastName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCLastName","IsEditable":true,"IsVisible":true,"Caption":"Sobrenome","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{PhoneNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPhone","IsEditable":true,"IsVisible":true,"Caption":"Tel.","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true},{"Value":"{EmailAddress}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCEmail","IsEditable":true,"IsVisible":true,"Caption":"Email","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true},{"Value":"{DateOfBirth}","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCDOB","IsEditable":true,"IsVisible":true,"Caption":"Dt. Nasc.","Mode":"Date"},{"Value":"{Street}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCStreet","IsEditable":true,"IsVisible":true,"Caption":"Endereço","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{HouseNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCHouseNumber","IsEditable":true,"IsVisible":true,"Caption":"Número","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{City}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCity","IsEditable":true,"IsVisible":true,"Caption":"Cidade","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":"{PostalCode}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPostalCode","IsEditable":true,"IsVisible":true,"Caption":"CEP","PlaceHolder":"Digitar Valor","Enabled":true},{"Value":["{Country}"],"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCountry","IsEditable":true,"IsVisible":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"País","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"Search":{"Placeholder":"Selecionar"},"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AR"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Visible":true}]}],"_Type":"Page","_Name":"Customers_Edit","Caption":"Alterar Clientes","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"{FirstName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCFirstName","IsVisible":true,"Separator":true,"Caption":"$(L,'name')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"Value":"{LastName}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCLastName","IsVisible":true,"Separator":true,"Caption":"$(L,'last_name')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"Value":"{PhoneNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPhone","IsVisible":true,"Separator":true,"Caption":"$(L,'phone')","PlaceHolder":"Digitar Valor","KeyboardType":"Phone","Enabled":true,"IsEditable":true},{"Value":"{EmailAddress}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCEmail","IsVisible":true,"Separator":true,"Caption":"$(L,'email')","PlaceHolder":"Digitar Valor","KeyboardType":"Email","Enabled":true,"IsEditable":true},{"Value":"{DateOfBirth}","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCDOB","IsVisible":true,"Separator":true,"Caption":"$(L,'birthdate')","IsEditable":true,"Mode":"Date"},{"Value":"{Street}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCStreet","IsVisible":true,"Separator":true,"Caption":"$(L,'address')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"Value":"{HouseNumber}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCHouseNumber","IsVisible":true,"Separator":true,"Caption":"$(L,'house_number')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"Value":"{City}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCity","IsVisible":true,"Separator":true,"Caption":"$(L,'city')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"Value":"{PostalCode}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCPostalCode","IsVisible":true,"Separator":true,"Caption":"$(L,'postal_code')","PlaceHolder":"Digitar Valor","Enabled":true,"IsEditable":true},{"Value":["{Country}"],"_Type":"Control.Type.FormCell.ListPicker","_Name":"FCCountry","IsVisible":true,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"$(L,'country')","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Please select one single item","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"Search":{"Placeholder":"Selecionar"},"PickerItems":[{"DisplayValue":"Brasil","ReturnValue":"BR"},{"DisplayValue":"Estados Unidos","ReturnValue":"US"},{"DisplayValue":"Alemanha","ReturnValue":"DE"},{"DisplayValue":"Itália","ReturnValue":"IT"},{"DisplayValue":"Argentina","ReturnValue":"AR"},{"DisplayValue":"Espanha","ReturnValue":"ES"},{"DisplayValue":"Canada","ReturnValue":"CA"},{"DisplayValue":"Mexico","ReturnValue":"MX"},{"DisplayValue":"França","ReturnValue":"FR"},{"DisplayValue":"Japão","ReturnValue":"JP"},{"DisplayValue":"Austria","ReturnValue":"AT"},{"DisplayValue":"China","ReturnValue":"CH"},{"DisplayValue":"Africa do Sul","ReturnValue":"ZA"},{"DisplayValue":"Grã Bretanha","ReturnValue":"GB"}]}],"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"FormCellContainer0SectionFormCell0"}]}],"_Type":"Page","_Name":"Customers_Edit","Caption":"$(L,'customer_edit')","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/Customers_UpdateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -536,7 +590,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \***************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"SalesOrderHeaders","QueryOptions":"$filter=CustomerId eq '{CustomerId}'&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem encontrada","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"{CustomerId}","Description":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{LifeCycleStatusName}","PreserveIconStackSpacing":true,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"Search":{"Enabled":true,"BarcodeScanner":true},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Customers_Orders","Caption":"Ordens do Cliente","PrefersLargeCaption":true}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.ObjectTable","Target":{"Service":"/MobileDemoSampleApp/Services/SampleServiceV2.service","EntitySet":"SalesOrderHeaders","QueryOptions":"$filter=CustomerId eq '{CustomerId}'&$orderby=CreatedAt desc"},"_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"Nenhuma ordem encontrada","FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true},"Title":"{SalesOrderId}","Subhead":"{CustomerId}","Description":"$(D,{CreatedAt},'','',{format:'medium'})","DisplayDescriptionInMobile":true,"StatusText":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","SubstatusText":"{LifeCycleStatusName}","PreserveIconStackSpacing":true,"AccessoryType":"disclosureIndicator","Tags":[],"AvatarStack":{"Avatars":[],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnPress":"/MobileDemoSampleApp/Actions/NavToSalesOrders_Details.action","Selected":false},"Search":{"Enabled":true,"BarcodeScanner":true},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}],"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"Customers_Orders","Caption":"$(L,'customer_orders')","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -566,7 +620,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \***************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Buttons":[{"_Name":"SectionButton0","Title":"Clientes","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://customer","ImagePosition":"Leading","FullWidth":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_List.action"}]}]}],"_Type":"Page","_Name":"Main","Caption":"Main","PrefersLargeCaption":true,"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"LogoutToolbarItem","Caption":"Logout","Enabled":true,"Visible":true,"Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/LogoutMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UploadToolbarItem","Caption":"Sync","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/Service/SyncStartedMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UpdateToolbarItem","Caption":"Update","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/AppUpdateProgressBanner.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"Upload Logs","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/LogUpload.action"}]}}
+module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable1","Visible":true,"EmptySection":{"Caption":"Botao novo","FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Buttons":[]},{"Layout":{"LayoutType":"Vertical","HorizontalAlignment":"Leading"},"_Type":"Section.Type.ButtonTable","_Name":"SectionButtonTable0","Visible":true,"EmptySection":{"FooterVisible":false},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Buttons":[{"_Name":"SectionButton0","Title":"$(L,'customer_title')","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://customer","ImagePosition":"Leading","FullWidth":false,"Visible":true,"Enabled":true,"OnPress":"/MobileDemoSampleApp/Actions/NavToCustomers_List.action"}]}],"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"}}],"_Type":"Page","_Name":"Main","Caption":"$(L,'main_title')","PrefersLargeCaption":true,"ToolBar":{"Items":[{"_Type":"Control.Type.ToolbarItem","_Name":"LogoutToolbarItem","Caption":"Logout","Enabled":true,"Visible":true,"Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/LogoutMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UploadToolbarItem","Caption":"Sync","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/Service/SyncStartedMessage.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"UpdateToolbarItem","Caption":"Update","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"OnPress":"/MobileDemoSampleApp/Actions/AppUpdateProgressBanner.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem0","Caption":"Upload Logs","Enabled":true,"Visible":"$(PLT,true,true,false)","Clickable":true,"Style":"","OnPress":"/MobileDemoSampleApp/Actions/LogUpload.action"},{"_Type":"Control.Type.ToolbarItem","_Name":"ToolbarItem1","Caption":"ToolbarItem","Enabled":true,"Visible":true,"Clickable":true,"Style":""}]}}
 
 /***/ }),
 
@@ -576,7 +630,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \***********************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"BRL","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCurrencyCode","IsEditable":true,"IsVisible":true,"Caption":"Moeda","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"18.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateNetAmount","IsEditable":true,"IsVisible":true,"Caption":"Montante Liquido","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"108.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateTaxAmount","IsEditable":true,"IsVisible":true,"Caption":"Montante Impostos","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"126.02","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateGrossAmount","IsEditable":true,"IsVisible":true,"Caption":"Montante Bruto","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"N","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatus","IsEditable":true,"IsVisible":true,"Caption":"Status","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"New","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatusName","IsEditable":true,"IsVisible":true,"Caption":"Nome Status","PlaceHolder":"PlaceHolder","Enabled":true},{"Value":"Entrar Data","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreatedate","IsEditable":true,"IsVisible":true,"Caption":"Dt. Criação","Mode":"Datetime"}],"Visible":true}]}],"_Type":"Page","_Name":"SalesOrderHeaders_Create","Caption":"Criar Ordem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"FormCellContainer0","Sections":[{"Controls":[{"Value":"BRL","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateCurrencyCode","IsVisible":true,"Separator":true,"Caption":"$(L,'currency')","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"18.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateNetAmount","IsVisible":true,"Separator":true,"Caption":"$(L,'net_amount')","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"108.010","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateTaxAmount","IsVisible":true,"Separator":true,"Caption":"$(L,'tax_amount')","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"126.02","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateGrossAmount","IsVisible":true,"Separator":true,"Caption":"$(L,'gross_amount')","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"N","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatus","IsVisible":true,"Separator":true,"Caption":"Status","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"New","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"FCCreateLifeCycleStatusName","IsVisible":true,"Separator":true,"Caption":"$(L,'name_status')","PlaceHolder":"PlaceHolder","Enabled":true,"IsEditable":true},{"Value":"$(L,'enter_date')","_Type":"Control.Type.FormCell.DatePicker","_Name":"FCCreatedate","IsVisible":true,"Separator":true,"Caption":"$(L,'creation_date')","IsEditable":true,"Mode":"Datetime"}],"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"FormCellContainer0SectionFormCell0"}]}],"_Type":"Page","_Name":"SalesOrderHeaders_Create","Caption":"$(L,'order_create')","PrefersLargeCaption":true,"ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"Item","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"Item","SystemItem":"Save","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/MobileDemoSampleApp/Actions/SalesOrderHeaders_CreateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -586,7 +640,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \******************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"KeyAndValues":[{"Value":"{SalesOrderId}","_Name":"KeyValue0","KeyName":"Número Ordem","Visible":true},{"Value":"{LifeCycleStatusName}","_Name":"KeyValue1","KeyName":"Status","Visible":true},{"Value":"$(D,{CreatedAt},'','',{format:'medium'})","_Name":"KeyValue2","KeyName":"Criado em","Visible":true},{"Value":"$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue3","KeyName":"Montante liquido","Visible":true},{"Value":"$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue4","KeyName":"Montante Imposto","Visible":true},{"Value":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue5","KeyName":"Montante Total","Visible":true}],"MaxItemCount":1,"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"SalesOrders_Details","Caption":"Detalhes da Ordem","PrefersLargeCaption":true}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"KeyAndValues":[{"Value":"$(L,'salesOrder_number')","_Name":"KeyValue0","KeyName":"$(L,'created_at')","Visible":true},{"Value":"{LifeCycleStatusName}","_Name":"KeyValue1","KeyName":"Status","Visible":true},{"Value":"$(D,{CreatedAt},'','',{format:'medium'})","_Name":"KeyValue2","KeyName":"$(L,'created_at')","Visible":true},{"Value":"$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue3","KeyName":"$(L,'net_amount')","Visible":true},{"Value":"$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue4","KeyName":"$(L,'tax_amount')","Visible":true},{"Value":"$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})","_Name":"KeyValue5","KeyName":"$(L,'gross_amount')","Visible":true}],"MaxItemCount":1,"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.KeyValue","_Name":"SectionKeyValue0","Visible":true,"EmptySection":{"FooterVisible":false},"Layout":{"NumberOfColumns":2}}]}],"_Type":"Page","_Name":"SalesOrders_Details","Caption":"$(L,'salesOrderItems_title')","PrefersLargeCaption":true}
 
 /***/ }),
 
@@ -596,7 +650,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = {"_Name":"MobileDemoSampleApp","Version":"/MobileDemoSampleApp/Globals/AppDefinition_Version.global","MainPage":"/MobileDemoSampleApp/Pages/Main.page","OnLaunch":["/MobileDemoSampleApp/Actions/Service/InitializeOffline.action"],"OnWillUpdate":"/MobileDemoSampleApp/Rules/OnWillUpdate.js","OnDidUpdate":"/MobileDemoSampleApp/Actions/Service/InitializeOffline.action","Styles":"/MobileDemoSampleApp/Styles/Styles.less","Localization":"/MobileDemoSampleApp/i18n/i18n.properties","_SchemaVersion":"6.3","StyleSheets":{"Styles":{"css":"/MobileDemoSampleApp/Styles/Styles.css","ios":"/MobileDemoSampleApp/Styles/Styles.nss","android":"/MobileDemoSampleApp/Styles/Styles.json"}}}
+module.exports = {"_Name":"MobileDemoSampleApp","Version":"/MobileDemoSampleApp/Globals/AppDefinition_Version.global","MainPage":"/MobileDemoSampleApp/Pages/Main.page","OnLaunch":["/MobileDemoSampleApp/Actions/Service/InitializeOffline.action"],"OnWillUpdate":"/MobileDemoSampleApp/Rules/OnWillUpdate.js","OnDidUpdate":"/MobileDemoSampleApp/Actions/Service/InitializeOffline.action","Styles":"/MobileDemoSampleApp/Styles/Styles.less","Localization":"/MobileDemoSampleApp/i18n/i18n.properties","_SchemaVersion":"23.8","StyleSheets":{"Styles":{"css":"/MobileDemoSampleApp/Styles/Styles.css","ios":"/MobileDemoSampleApp/Styles/Styles.nss","android":"/MobileDemoSampleApp/Styles/Styles.json"}}}
 
 /***/ }),
 
@@ -1090,38 +1144,6 @@ module.exports = {"DestinationName":"SampleServiceV2","OfflineEnabled":true,"Lan
 
 /***/ }),
 
-/***/ "./build.definitions/version.mdkbundlerversion":
-/*!*****************************************************!*\
-  !*** ./build.definitions/version.mdkbundlerversion ***!
-  \*****************************************************/
-/***/ ((module) => {
-
-module.exports = "1.1\n"
-
-/***/ }),
-
-/***/ "./build.definitions/MobileDemoSampleApp/Styles/Styles.json":
-/*!******************************************************************!*\
-  !*** ./build.definitions/MobileDemoSampleApp/Styles/Styles.json ***!
-  \******************************************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = {};
-
-/***/ }),
-
-/***/ "./build.definitions/MobileDemoSampleApp/jsconfig.json":
-/*!*************************************************************!*\
-  !*** ./build.definitions/MobileDemoSampleApp/jsconfig.json ***!
-  \*************************************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"include":["Rules/**/*",".typings/**/*"]}');
-
-/***/ }),
-
 /***/ "./build.definitions/application-index.js":
 /*!************************************************!*\
   !*** ./build.definitions/application-index.js ***!
@@ -1178,6 +1200,7 @@ let mobiledemosampleapp_actions_updatecustomerentityfailuremessage_action = __we
 let mobiledemosampleapp_actions_validationfailure_action = __webpack_require__(/*! ./MobileDemoSampleApp/Actions/ValidationFailure.action */ "./build.definitions/MobileDemoSampleApp/Actions/ValidationFailure.action")
 let mobiledemosampleapp_globals_appdefinition_version_global = __webpack_require__(/*! ./MobileDemoSampleApp/Globals/AppDefinition_Version.global */ "./build.definitions/MobileDemoSampleApp/Globals/AppDefinition_Version.global")
 let mobiledemosampleapp_i18n_i18n_properties = __webpack_require__(/*! ./MobileDemoSampleApp/i18n/i18n.properties */ "./build.definitions/MobileDemoSampleApp/i18n/i18n.properties")
+let mobiledemosampleapp_i18n_i18n_pt_properties = __webpack_require__(/*! ./MobileDemoSampleApp/i18n/i18n_pt.properties */ "./build.definitions/MobileDemoSampleApp/i18n/i18n_pt.properties")
 let mobiledemosampleapp_jsconfig_json = __webpack_require__(/*! ./MobileDemoSampleApp/jsconfig.json */ "./build.definitions/MobileDemoSampleApp/jsconfig.json")
 let mobiledemosampleapp_pages_customer_list_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customer_List.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customer_List.page")
 let mobiledemosampleapp_pages_customers_create_page = __webpack_require__(/*! ./MobileDemoSampleApp/Pages/Customers_Create.page */ "./build.definitions/MobileDemoSampleApp/Pages/Customers_Create.page")
@@ -1257,6 +1280,7 @@ module.exports = {
 	mobiledemosampleapp_actions_validationfailure_action : mobiledemosampleapp_actions_validationfailure_action,
 	mobiledemosampleapp_globals_appdefinition_version_global : mobiledemosampleapp_globals_appdefinition_version_global,
 	mobiledemosampleapp_i18n_i18n_properties : mobiledemosampleapp_i18n_i18n_properties,
+	mobiledemosampleapp_i18n_i18n_pt_properties : mobiledemosampleapp_i18n_i18n_pt_properties,
 	mobiledemosampleapp_jsconfig_json : mobiledemosampleapp_jsconfig_json,
 	mobiledemosampleapp_pages_customer_list_page : mobiledemosampleapp_pages_customer_list_page,
 	mobiledemosampleapp_pages_customers_create_page : mobiledemosampleapp_pages_customers_create_page,
@@ -1285,6 +1309,39 @@ module.exports = {
 	tsconfig_json : tsconfig_json,
 	version_mdkbundlerversion : version_mdkbundlerversion
 }
+
+/***/ }),
+
+/***/ "./build.definitions/version.mdkbundlerversion":
+/*!*****************************************************!*\
+  !*** ./build.definitions/version.mdkbundlerversion ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = "1.1\n";
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/Styles/Styles.json":
+/*!******************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/Styles/Styles.json ***!
+  \******************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = {};
+
+/***/ }),
+
+/***/ "./build.definitions/MobileDemoSampleApp/jsconfig.json":
+/*!*************************************************************!*\
+  !*** ./build.definitions/MobileDemoSampleApp/jsconfig.json ***!
+  \*************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"include":["Rules/**/*",".typings/**/*"]}');
 
 /***/ }),
 

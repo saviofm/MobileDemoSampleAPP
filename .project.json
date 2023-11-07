@@ -47,6 +47,7 @@
 	},
 	"Build": {
 		"SourceMap": true,
-		"WMF": false
+		"WMF": true,
+		"TSTarget": "es6"
 	}
 }

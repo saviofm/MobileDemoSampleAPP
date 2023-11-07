@@ -5,6 +5,10 @@
 			"_Name": "SectionedTable0",
 			"Sections": [
 				{
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
 					"_Type": "Section.Type.ButtonTable",
 					"_Name": "SectionButtonTable1",
 					"Visible": true,
@@ -12,11 +16,14 @@
 						"Caption": "Botao novo",
 						"FooterVisible": false
 					},
-					"Buttons": [],
-					"Layout": {
-						"LayoutType": "Vertical",
-						"HorizontalAlignment": "Leading"
-					}
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Buttons": []
 				},
 				{
 					"Layout": {
@@ -29,11 +36,17 @@
 					"EmptySection": {
 						"FooterVisible": false
 					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"Buttons": [
 						{
 							"_Name": "SectionButton0",
-							"Title": "Clientes",
-							"TextAlignment": "Center",
+							"Title": "$(L,'customer_title')",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
@@ -41,16 +54,21 @@
 							"ImagePosition": "Leading",
 							"FullWidth": false,
 							"Visible": true,
+							"Enabled": true,
 							"OnPress": "/MobileDemoSampleApp/Actions/NavToCustomers_List.action"
 						}
 					]
 				}
-			]
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Main",
-	"Caption": "Main",
+	"Caption": "$(L,'main_title')",
 	"PrefersLargeCaption": true,
 	"ToolBar": {
 		"Items": [

@@ -1,1 +1,5 @@
-{}
+{
+    "mdk.i18n": {
+        "displayLanguages": "i18n,i18n_pt"
+    }
+}

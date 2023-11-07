@@ -1,21 +1,19 @@
 {
 	"Controls": [
 		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "SectionedTable0",
 			"Sections": [
 				{
-					"_Type": "Section.Type.KeyValue",
-					"_Name": "SectionKeyValue0",
-					"Visible": true,
-					"EmptySection": {
-						"FooterVisible": false
-					},
 					"KeyAndValues": [
 						{
-							"Value": "{SalesOrderId}",
+							"Value": "$(L,'salesOrder_number')",
 							"_Name": "KeyValue0",
-							"KeyName": "Número Ordem",
+							"KeyName": "$(L,'created_at')",
 							"Visible": true
 						},
 						{
@@ -27,29 +25,42 @@
 						{
 							"Value": "$(D,{CreatedAt},'','',{format:'medium'})",
 							"_Name": "KeyValue2",
-							"KeyName": "Criado em",
+							"KeyName": "$(L,'created_at')",
 							"Visible": true
 						},
 						{
 							"Value": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
 							"_Name": "KeyValue3",
-							"KeyName": "Montante liquido",
+							"KeyName": "$(L,'net_amount')",
 							"Visible": true
 						},
 						{
 							"Value": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
 							"_Name": "KeyValue4",
-							"KeyName": "Montante Imposto",
+							"KeyName": "$(L,'tax_amount')",
 							"Visible": true
 						},
 						{
 							"Value": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
 							"_Name": "KeyValue5",
-							"KeyName": "Montante Total",
+							"KeyName": "$(L,'gross_amount')",
 							"Visible": true
 						}
 					],
 					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
 					"Layout": {
 						"NumberOfColumns": 2
 					}
@@ -59,6 +70,6 @@
 	],
 	"_Type": "Page",
 	"_Name": "SalesOrders_Details",
-	"Caption": "Detalhes da Ordem",
+	"Caption": "$(L,'salesOrderItems_title')",
 	"PrefersLargeCaption": true
 }

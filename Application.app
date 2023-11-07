@@ -9,5 +9,5 @@
 	"OnDidUpdate": "/MobileDemoSampleApp/Actions/Service/InitializeOffline.action",
 	"Styles": "/MobileDemoSampleApp/Styles/Styles.less",
 	"Localization": "/MobileDemoSampleApp/i18n/i18n.properties",
-	"_SchemaVersion": "6.3"
+	"_SchemaVersion": "23.8"
 }

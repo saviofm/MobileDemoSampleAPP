@@ -1,7 +1,11 @@
 {
 	"Controls": [
 		{
-			"_Type": "Control.Type.FormCellContainer",
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
 			"_Name": "FormCellContainer0",
 			"Sections": [
 				{
@@ -10,92 +14,101 @@
 							"Value": "{FirstName}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCFirstName",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Nome",
+							"Separator": true,
+							"Caption": "$(L,'name')",
 							"PlaceHolder": "Digitar Valor",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "{LastName}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCLastName",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Sobrenome",
+							"Separator": true,
+							"Caption": "$(L,'last_name')",
 							"PlaceHolder": "Digitar Valor",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "{PhoneNumber}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCPhone",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Tel.",
+							"Separator": true,
+							"Caption": "$(L,'phone')",
 							"PlaceHolder": "Digitar Valor",
 							"KeyboardType": "Phone",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "{EmailAddress}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCEmail",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Email",
+							"Separator": true,
+							"Caption": "$(L,'email')",
 							"PlaceHolder": "Digitar Valor",
 							"KeyboardType": "Email",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "{DateOfBirth}",
 							"_Type": "Control.Type.FormCell.DatePicker",
 							"_Name": "FCDOB",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Dt. Nasc.",
+							"Separator": true,
+							"Caption": "$(L,'birthdate')",
+							"IsEditable": true,
 							"Mode": "Date"
 						},
 						{
 							"Value": "{Street}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCStreet",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Endereço",
+							"Separator": true,
+							"Caption": "$(L,'address')",
 							"PlaceHolder": "Digitar Valor",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "{HouseNumber}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCHouseNumber",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Número",
+							"Separator": true,
+							"Caption": "$(L,'house_number')",
 							"PlaceHolder": "Digitar Valor",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "{City}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCCity",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "Cidade",
+							"Separator": true,
+							"Caption": "$(L,'city')",
 							"PlaceHolder": "Digitar Valor",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": "{PostalCode}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "FCPostalCode",
-							"IsEditable": true,
 							"IsVisible": true,
-							"Caption": "CEP",
+							"Separator": true,
+							"Caption": "$(L,'postal_code')",
 							"PlaceHolder": "Digitar Valor",
-							"Enabled": true
+							"Enabled": true,
+							"IsEditable": true
 						},
 						{
 							"Value": [
@@ -103,11 +116,11 @@
 							],
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "FCCountry",
-							"IsEditable": true,
 							"IsVisible": true,
+							"Separator": true,
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
-							"Caption": "País",
+							"Caption": "$(L,'country')",
 							"DataPaging": {
 								"ShowLoadingIndicator": false,
 								"PageSize": 50
@@ -117,6 +130,7 @@
 							"IsPickerDismissedOnSelection": false,
 							"IsSearchCancelledAfterSelection": false,
 							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
 							"Search": {
 								"Placeholder": "Selecionar"
 							},
@@ -180,14 +194,27 @@
 							]
 						}
 					],
-					"Visible": true
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "FormCellContainer0SectionFormCell0"
 				}
 			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Customers_Edit",
-	"Caption": "Alterar Clientes",
+	"Caption": "$(L,'customer_edit')",
+	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
 			{

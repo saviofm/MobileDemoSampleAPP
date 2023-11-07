@@ -1,6 +1,10 @@
 {
 	"Controls": [
 		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
 			"_Type": "Control.Type.SectionedTable",
 			"_Name": "SectionedTable0",
 			"Sections": [
@@ -25,29 +29,36 @@
 						{
 							"Value": "{Street}, {HouseNumber}",
 							"_Name": "KeyValue2",
-							"KeyName": "Endereço",
+							"KeyName": "$(L,'address')",
 							"Visible": true
 						},
 						{
 							"Value": "{City}",
 							"_Name": "KeyValue3",
-							"KeyName": "Cidade",
+							"KeyName": "$(L,'city')",
 							"Visible": true
 						},
 						{
 							"Value": "{PostalCode}",
 							"_Name": "KeyValue1",
-							"KeyName": "CEP",
+							"KeyName": "$(L,'postal_code')",
 							"Visible": true
 						},
 						{
 							"Value": "{Country}",
 							"_Name": "KeyValue0",
-							"KeyName": "País",
+							"KeyName": "$(L,'country')",
 							"Visible": true
 						}
 					],
 					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"_Type": "Section.Type.KeyValue",
 					"_Name": "SectionKeyValue0",
 					"Visible": true,
@@ -61,8 +72,9 @@
 				{
 					"Header": {
 						"_Name": "SectionHeader0",
+						"AccessoryType": "none",
 						"UseTopPadding": true,
-						"Caption": "Ordens"
+						"Caption": "$(L,'salesOrderHeaders_title')"
 					},
 					"Footer": {
 						"_Name": "SectionFooter0",
@@ -73,6 +85,13 @@
 						"Visible": true,
 						"OnPress": "/MobileDemoSampleApp/Actions/NavToCustomers_Orders.action",
 						"UseBottomPadding": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
 					},
 					"_Type": "Section.Type.ObjectTable",
 					"DataSubscriptions": [
@@ -130,7 +149,7 @@
 	],
 	"_Type": "Page",
 	"_Name": "Customers_Detail",
-	"Caption": "Detalhes",
+	"Caption": "$(L,'customer_detail')",
 	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
@@ -160,7 +179,7 @@
 			{
 				"_Type": "Control.Type.ToolbarItem",
 				"_Name": "ToolbarItem0",
-				"Caption": "Criar Ordem",
+				"Caption": "$(L,'order_create')",
 				"Enabled": true,
 				"Visible": true,
 				"Clickable": true,

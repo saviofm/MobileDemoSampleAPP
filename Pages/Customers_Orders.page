@@ -17,6 +17,13 @@
 						"Caption": "Nenhuma ordem encontrada",
 						"FooterVisible": false
 					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
 					"ObjectCell": {
 						"ContextMenu": {
 							"Items": [],
@@ -58,11 +65,15 @@
 						"Mode": "None"
 					}
 				}
-			]
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
 		}
 	],
 	"_Type": "Page",
 	"_Name": "Customers_Orders",
-	"Caption": "Ordens do Cliente",
+	"Caption": "$(L,'customer_orders')",
 	"PrefersLargeCaption": true
 }
