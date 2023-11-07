@@ -78,7 +78,7 @@
 					},
 					"Footer": {
 						"_Name": "SectionFooter0",
-						"Caption": "Ver todas ordens",
+						"Caption": "$(L,'see_all_orders')",
 						"AttributeLabel": "/MobileDemoSampleApp/Rules/Customers_OrderCount.js",
 						"AccessoryType": "disclosureIndicator",
 						"FooterStyle": "attribute",
